@@ -1,0 +1,7 @@
+#!/bin/sh
+# Course-language gate. Vercel runs the same check at build time; this catches
+# it locally so you don't wait on a failed deploy.
+python3 scripts/audit-course-language.py || {
+  echo "push blocked — fix the findings above"
+  exit 1
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tayana Academy — Pricing &amp; financing</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Honest, per-pillar pricing. Builders and Consumers cohorts, what's included, and how financing works. The masterclass is free.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Tayana Academy — Pricing &amp;amp; financing">
+  <meta property="og:description" content="Honest, per-pillar pricing. Builders and Consumers cohorts, what's included, and how financing works. The masterclass is free.">
+  <meta property="og:url" content="https://tayanaacademy.com/pricing.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tayana Academy — Pricing &amp;amp; financing">
+  <meta name="twitter:description" content="Honest, per-pillar pricing. Builders and Consumers cohorts, what's included, and how financing works. The masterclass is free.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .pr-hero { padding: 132px 0 20px; text-align: center; }
+  .pr-note { font: 500 12px/1.5 var(--mono); color: var(--steel); text-align:center; margin-top: 14px; }
+  .pr-note b { color: var(--copper); font-weight: 600; }
+  .pr-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 48px; }
+  .pr-card { border:1px solid var(--ash-border); border-radius: var(--r-card); background: var(--paper); padding: 38px 34px; position: relative; overflow: hidden; display:flex; flex-direction:column; }
+  .pr-card.b { box-shadow: inset 0 4px 0 var(--copper); }
+  .pr-card.c { box-shadow: inset 0 4px 0 var(--brass); }
+  .pr-tag { display:inline-flex; width:fit-content; align-items:center; gap:7px; font:600 12px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; padding:6px 13px; border-radius: var(--r-pill); margin-bottom: 18px; }
+  .pr-card.b .pr-tag { background: var(--copper-soft); color: var(--copper-deep); }
+  .pr-card.c .pr-tag { background: var(--brass-soft); color: var(--brass-deep); }
+  .pr-name { font: 800 26px/1.1 var(--display); color: var(--iron); margin-bottom: 6px; }
+  .pr-for { font: 400 15px/1.5 var(--sans); color: var(--steel); margin-bottom: 22px; }
+  .pr-price { display:flex; align-items:baseline; gap: 8px; margin-bottom: 4px; }
+  .pr-price .amt { font: 900 46px/1 var(--display); color: var(--iron); letter-spacing: -.02em; }
+  .pr-price .per { font: 500 14px/1 var(--mono); color: var(--steel); }
+  .pr-sub { font: 500 12px/1.5 var(--mono); color: var(--steel); margin-bottom: 24px; }
+  .pr-list { display:flex; flex-direction:column; gap: 11px; margin-bottom: 28px; }
+  .pr-li { display:flex; gap:11px; align-items:flex-start; font: 400 15px/1.45 var(--sans); color: var(--iron); }
+  .pr-li .ck { width:20px; height:20px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+  .pr-li .ck svg { width:12px; height:12px; }
+  .pr-card.b .ck { background: var(--copper-soft); color: var(--copper-deep); }
+  .pr-card.c .ck { background: var(--brass-soft); color: var(--brass-deep); }
+  .pr-card .btn { margin-top: auto; }
+  .fin { display:grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+  .fin-c { border:1px solid var(--ash-border); border-radius: var(--r-card); background: var(--paper); padding: 26px; }
+  .fin-c h4 { font: 800 17px/1.15 var(--display); color: var(--iron); margin-bottom: 8px; }
+  .fin-c p { font: 400 14px/1.55 var(--sans); color: var(--steel); }
+  .faq-list { max-width: 780px; margin: 40px auto 0; }
+  .faq-q { border-top: 1px solid var(--ash-border); padding: 22px 0; }
+  .faq-q h4 { font: 700 17px/1.3 var(--display); color: var(--iron); margin-bottom: 8px; }
+  .faq-q p { font: 400 15px/1.55 var(--sans); color: var(--steel); }
+  .pr-price .strike { font: 700 22px/1 var(--display); color: var(--steel-light); text-decoration: line-through; letter-spacing: -.02em; }
+  .pr-emi { display:inline-flex; align-items:center; gap:8px; font: 500 12px/1 var(--mono); color: var(--iron); background: var(--ash); border:1px solid var(--ash-border); padding:8px 12px; border-radius: var(--r-pill); margin-bottom: 12px; }
+  .pr-emi b { font-weight: 700; }
+  .pr-commit { display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 22px; }
+  .pr-commit span { font: 500 11px/1 var(--mono); letter-spacing:.03em; color: var(--steel); background: var(--ash); border:1px solid var(--ash-border); padding:7px 11px; border-radius: var(--r-chip); }
+  .incl { display:grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-top: 40px; border:1px solid var(--ash-border); border-radius: var(--r-card); background: var(--paper); padding: 40px; box-shadow: var(--shadow-card); }
+  .incl h3 { font: 800 24px/1.1 var(--display); color: var(--iron); letter-spacing:-.02em; margin-bottom: 20px; }
+  .incl-list { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .incl-li { display:flex; gap:11px; align-items:flex-start; font: 400 14px/1.45 var(--sans); color: var(--iron); }
+  .incl-li .ck { width:20px; height:20px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; margin-top:1px; background: var(--copper-soft); color: var(--copper-deep); }
+  .incl-li .ck svg { width:12px; height:12px; }
+  .incl-aside { border-left: 1px solid var(--ash-border); padding-left: 40px; display:flex; flex-direction:column; gap: 20px; }
+  .incl-fact .k { font: 600 11px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color: var(--steel); margin-bottom: 7px; }
+  .incl-fact .v { font: 700 16px/1.35 var(--sans); color: var(--iron); }
+  .incl-fact .v .em { font-family: var(--serif); font-style: italic; color: var(--copper); }
+  @media (max-width: 900px){ .pr-grid { grid-template-columns: 1fr; } .fin { grid-template-columns: 1fr; } .incl { grid-template-columns: 1fr; } .incl-aside { border-left:none; border-top:1px solid var(--ash-border); padding-left:0; padding-top:24px; } .incl-list { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="index.html#outcomes">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="pricing.html" style="color:var(--copper)">Pricing</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="contact.html" class="btn btn-primary" style="padding:11px 22px" data-toast="Masterclass registration — we'll email your cohort date.">Register free</a></div>
+</div></div></nav>
+
+<header class="pr-hero">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h1 class="section-q">One price per pillar. <span class="em">No tiers.</span></h1>
+    <p class="section-lede">One price per pillar, nothing gated — the same mentors, the same project reviews, the same placement support for every seat. The masterclass is always free.</p>
+    <p class="pr-note">Current cohort pricing is shared at the <b>free masterclass</b> (Builders) or on your <b>scoping call</b> (Consumers).</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 20px">
+  <div class="wrap">
+    <div class="pr-grid">
+      <div class="pr-card b">
+        <span class="pr-tag">▲ Builders</span>
+        <div class="pr-name">AI Career Track</div>
+        <div class="pr-for">For people entering AI careers — one of four tracks after screening.</div>
+        <!-- PRICING FIGURES REMOVED (founder decision, Jul 2026). Restore when real numbers confirmed:
+        <div class="pr-price"><span class="strike">$2,900</span><span class="amt">$2,400</span><span class="per">/ cohort</span></div>
+        <div class="pr-emi">EMI from <b>$800/mo</b> × 3 · interest-free</div> -->
+        <div class="pr-price"><span class="amt" style="font-size:30px">Shared at the masterclass</span></div>
+        <div class="pr-sub">4–6 weeks · current cohort pricing shared when you register</div>
+        <div class="pr-commit"><span>Next cohort · Mar 15, 2026</span><span>8–12 hrs / week</span><span>Application-based</span><span>24 seats max</span></div>
+        <div class="pr-list">
+            <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Orion access + AI Foundation 1 &amp; 2</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Career assessment &amp; technical screening</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>A deployed portfolio project on real data</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>A certificate on completion</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Placement pathway + working-operator mentors</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Foundation courses if you need Python / Full-Stack first</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-toast="Application received — we'll reach out with next steps.">Apply · Builders</a>
+      </div>
+      <div class="pr-card c">
+        <span class="pr-tag">◆ Consumers</span>
+        <div class="pr-name">AI Adoption Cohort</div>
+        <div class="pr-for">For professionals applying AI to the role they already have.</div>
+        <!-- PRICING FIGURES REMOVED (founder decision, Jul 2026). Restore when real numbers confirmed:
+        <div class="pr-price"><span class="strike">$1,500</span><span class="amt">$1,200</span><span class="per">/ cohort</span></div>
+        <div class="pr-emi">EMI from <b>$400/mo</b> × 3 · interest-free</div> -->
+        <div class="pr-price"><span class="amt" style="font-size:30px">Shared on your scoping call</span></div>
+        <div class="pr-sub">30 days · + optional 2-hr team pilot</div>
+        <div class="pr-commit"><span>Next cohort · Mar 15, 2026</span><span>4–6 hrs / week</span><span>Scoping-call first</span><span>20 seats max</span></div>
+        <div class="pr-list">
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Orion access + themed cohort by your function</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Scoping call to pick the right workflow</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>A workflow shipped to production, ROI measured</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>No code, no new stack to learn</div>
+          <div class="pr-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Optional 2-hour team pilot add-on</div>
+        </div>
+        <a href="contact.html" class="btn btn-brass" data-toast="Scoping call request received — we'll reach out to schedule.">Book a scoping call</a>
+      </div>
+    </div>
+
+    <div class="incl">
+      <div>
+        <h3>What every seat includes</h3>
+        <div class="incl-list">
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span><b>Hands-on experience</b> — you ship, not watch</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span><b>Certificate</b> backed by a shipped project</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span><b>Placement assistance</b> — introductions that matter</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Full Orion LMS access</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Live, project-first cohort</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Weekly mentor project reviews</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>A deployed project or workflow</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Placement pathway or measured ROI</div>
+          <div class="incl-li"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg></span>Alumni network, for life</div>
+        </div>
+      </div>
+      <div class="incl-aside">
+        <!-- DEPOSIT FIGURE REMOVED pending real pricing:
+        <div class="incl-fact"><div class="k">Reserve your seat</div><div class="v">A <span class="em">$200 deposit</span> holds your place.</div></div> -->
+        <div class="incl-fact"><div class="k">Reserve your seat</div><div class="v">Apply and we hold your place — <span class="em">selection is application-based</span> for quality fit.</div></div>
+        <div class="incl-fact"><div class="k">Admission</div><div class="v">Application-based, so cohorts stay small — 24 Builders or 20 Consumers.</div></div>
+        <div class="incl-fact"><div class="k">Pay how you like</div><div class="v">Pay in full, split monthly interest-free, or route it through your employer's L&amp;D budget.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">Financing</p>
+    <h2 class="section-q">Ways to <span class="em">pay.</span></h2>
+    <div class="fin">
+      <div class="fin-c"><h4>Pay in full</h4><p>One upfront payment for the cohort. The simplest option — nothing else to manage.</p></div>
+      <div class="fin-c"><h4>Monthly plan</h4><p>Split tuition across the cohort in equal monthly payments, interest-free.</p></div>
+      <div class="fin-c"><h4>Employer-sponsored</h4><p>Many Consumers learners come through their employer. We'll invoice your L&amp;D or ops budget directly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">Questions</p>
+    <h2 class="section-q" style="text-align:center">Still wondering if this <span class="em">is for you?</span></h2>
+    <div class="faq-list">
+      <div class="faq-q"><h4>Is the masterclass really free?</h4><p>Yes. The masterclass is the door — you see the room, meet mentors and screen your fit before any commitment or payment.</p></div>
+      <div class="faq-q"><h4>What if I need Python or Full-Stack first?</h4><p>Foundation courses are included in the Builders track. If screening routes you to Python Foundation or Full-Stack Foundation, you take it and re-assess at no extra cost.</p></div>
+      <div class="faq-q"><h4>Can I switch pillars?</h4><p>Pillars are exclusive per cohort. If your goals change, you can join the other pillar's next cohort — talk to us and we'll help you pick.</p></div>
+      <div class="faq-q"><h4>Do you offer refunds?</h4><p>Because seats are limited (24 Builders / 20 Consumers), refund windows close before each cohort start. The masterclass exists so you can decide before you pay.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="quiz-banner reveal">
+      <h3>Start with the <span class="bold">masterclass</span>.</h3>
+      <p>It's free, and it's the honest way to decide. Register, see the curriculum, and we'll share the current pricing and your cohort date.</p>
+      <a href="contact.html" class="btn btn-lg" data-toast="Masterclass registration — we'll email your cohort date.">Register for the free masterclass</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-news">
+      <div class="fn-copy">
+        <h4>Field notes, <span class="em">twice a month.</span></h4>
+        <p>New cohorts, masterclass dates, and what's actually shipping in AI. No noise.</p>
+      </div>
+      <form data-form="newsletter" data-success="You&#39;re subscribed — field notes land twice a month." novalidate>
+        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
+        <input name="email" type="email" required placeholder="you@company.com" aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="catalog.html" style="color:var(--copper-light)">Career Tracks</a> · <a href="pillars.html" style="color:var(--copper-light)">Pillars</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+  <script src="forms.js" defer></script>
+</body>
+</html>

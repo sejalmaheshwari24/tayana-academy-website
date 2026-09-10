@@ -1,0 +1,19 @@
+.vbos/
+.vercel/
+.DS_Store
+
+# Secrets never belong in this repo — it is PUBLIC. Real values go in
+# Vercel → Settings → Environment Variables. See FORMS.md and PAYMENTS.md.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# Written by scripts/stamp-build.py during the build.
+deploy-info.json
+
+# Salvage copy of a git dir left by the iCloud rsync failure. Kept on disk,
+# never tracked — a stray HEAD/config inside a checkout confuses tooling.
+.git-broken-rsync/

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Field notes from the AI economy — what's shipping, who's hiring, and what actually works in production. Twice a month, no noise.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Field Notes — Tayana Academy">
+  <meta property="og:description" content="Field notes from the AI economy — what's shipping, who's hiring, and what actually works in production. Twice a month, no noise.">
+  <meta property="og:url" content="https://tayanaacademy.com/resources.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Field Notes — Tayana Academy">
+  <meta name="twitter:description" content="Field notes from the AI economy — what's shipping, who's hiring, and what actually works in production. Twice a month, no noise.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .fn-hero { position: relative; overflow: hidden; padding: 132px 0 8px; text-align: center; }
+  .fn-chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .fn-chip { font: 600 12px/1 var(--mono); letter-spacing: .04em; color: var(--fg-muted); border: 1px solid var(--border); padding: 9px 16px; border-radius: var(--r-pill); cursor: pointer; transition: color var(--dur-micro), border-color var(--dur-micro); }
+  .fn-chip.on, .fn-chip:hover { color: var(--copper); border-color: var(--copper); }
+  .fn-feat { display: grid; grid-template-columns: 1.1fr .9fr; gap: 0; border-radius: var(--r-card); overflow: hidden; margin-bottom: 40px; }
+  .fn-feat-img { background: linear-gradient(135deg, var(--copper), var(--copper-deep)); min-height: 300px; position: relative; }
+  .fn-feat-img .g { position: absolute; right: -10px; bottom: -20px; font: 900 200px/1 var(--display); color: rgba(255,255,255,.12); }
+  .fn-feat-body { padding: 44px; display: flex; flex-direction: column; justify-content: center; }
+  .fn-tag { font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--copper-light); margin-bottom: 14px; }
+  [data-theme="light"] .fn-tag { color: var(--copper); }
+  .fn-feat-body h2 { font: 800 clamp(1.6rem,3vw,2.4rem)/1.1 var(--display); letter-spacing: -.03em; color: var(--fg); margin-bottom: 12px; }
+  .fn-feat-body p { font: 400 15px/1.6 var(--sans); color: var(--fg-muted); margin-bottom: 18px; }
+  .fn-byline { font: 500 12px/1 var(--mono); color: var(--fg-muted); }
+  .fn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fn-card { border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--dur-micro), box-shadow var(--dur-micro); }
+  .fn-card:hover { transform: translateY(-4px); }
+  .fn-thumb { height: 130px; position: relative; overflow: hidden; }
+  .fn-thumb.b { background: linear-gradient(135deg, #2a1f8a, #5B47FF); }
+  .fn-thumb.c { background: linear-gradient(135deg, #1b5e1a, #4FB04C); }
+  .fn-thumb.s { background: linear-gradient(135deg, #8a6a10, #FFD23F); }
+  .fn-thumb .g { position: absolute; right: -6px; bottom: -14px; font: 900 110px/1 var(--display); color: rgba(255,255,255,.14); }
+  .fn-card-body { padding: 22px; display: flex; flex-direction: column; gap: 9px; flex: 1; }
+  .fn-cat { font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--fg-muted); }
+  .fn-card h3 { font: 800 18px/1.2 var(--display); letter-spacing: -.02em; color: var(--fg); }
+  .fn-card p { font: 400 14px/1.55 var(--sans); color: var(--fg-muted); flex: 1; }
+  .fn-card .fn-byline { padding-top: 12px; border-top: 1px solid var(--border); }
+  .news { border-radius: var(--r-card); padding: 56px 48px; text-align: center; position: relative; overflow: hidden; margin-top: 16px; }
+  .news h3 { font: 800 clamp(1.8rem,3.4vw,2.6rem)/1.1 var(--display); letter-spacing: -.03em; color: var(--fg); }
+  .news h3 .em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--copper); }
+  .news p { font: 400 15px/1.5 var(--sans); color: var(--fg-muted); margin: 12px auto 24px; max-width: 460px; }
+  .news-form { display: flex; gap: 10px; justify-content: center; max-width: 460px; margin: 0 auto; flex-wrap: wrap; }
+  .news-input { flex: 1; min-width: 220px; font: 400 14px/1 var(--sans); padding: 15px 18px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-pill); color: var(--fg); outline: none; }
+  .news-input:focus { border-color: var(--copper); }
+  @media (max-width: 820px) { .fn-feat { grid-template-columns: 1fr; } .fn-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .fn-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="outcomes.html">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="mentors.html">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="index.html#contact" class="btn btn-primary" style="padding:11px 22px" data-toast="Masterclass registration — we'll email your cohort date.">Register free</a></div>
+</div></div></nav>
+
+<header class="fn-hero">
+  <div class="bloom-field" aria-hidden="true"><span></span></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <p class="eyebrow">Field notes</p>
+    <h1 class="section-q">From the <span class="em">AI economy.</span></h1>
+    <p class="section-lede">What's shipping, who's hiring, and what actually works in production. Twice a month, no noise — for Builders and Consumers alike.</p>
+    <div class="fn-chips">
+      <span class="fn-chip on">All</span>
+      <span class="fn-chip">Builders</span>
+      <span class="fn-chip">Consumers</span>
+      <span class="fn-chip">Cohort notes</span>
+      <span class="fn-chip">Hiring</span>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <article class="fn-feat glass">
+      <div class="fn-feat-img"><span class="g">R</span></div>
+      <div class="fn-feat-body">
+        <div class="fn-tag">Featured · Builders</div>
+        <h2>What "RAG in production" actually takes</h2>
+        <p>Retrieval is the easy part. We break down the chunking, eval, and observability work that separates a demo from a system that stays up — straight from cohort projects.</p>
+        <div class="fn-byline">Mani N. · 8 min read · May 2026</div>
+      </div>
+    </article>
+    <div class="fn-grid">
+      <article class="fn-card glass"><div class="fn-thumb b"><span class="g">A</span></div><div class="fn-card-body"><div class="fn-cat">Builders</div><h3>Agents that recover from failure</h3><p>Routing and retries that keep a multi-agent workflow alive in the real world.</p><div class="fn-byline">Arjun V. · 6 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb c"><span class="g">F</span></div><div class="fn-card-body"><div class="fn-cat">Consumers</div><h3>Rebuilding the monthly close with AI</h3><p>A finance team's 45-minutes-to-12 story, and the workflow behind it.</p><div class="fn-byline">Kiran P. · 5 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb s"><span class="g">H</span></div><div class="fn-card-body"><div class="fn-cat">Hiring</div><h3>What AI teams screen for in 2026</h3><p>The portfolio signals that get Builders alumni into interviews.</p><div class="fn-byline">Tayana · 4 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb c"><span class="g">L</span></div><div class="fn-card-body"><div class="fn-cat">Consumers</div><h3>Getting a team to actually adopt AI</h3><p>Why workflow-first beats tool-first for L&amp;D rollouts.</p><div class="fn-byline">Tara S. · 6 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb b"><span class="g">E</span></div><div class="fn-card-body"><div class="fn-cat">Builders</div><h3>Evals before you ship</h3><p>The release gate every cohort project has to pass.</p><div class="fn-byline">Arjun V. · 7 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb b"><span class="g">C</span></div><div class="fn-card-body"><div class="fn-cat">Cohort notes</div><h3>Inside Cohort 07's demo day</h3><p>Six projects, six outcomes — what shipped and where they landed.</p><div class="fn-byline">Tayana · 5 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb s"><span class="g">O</span></div><div class="fn-card-body"><div class="fn-cat">Builders</div><h3>The Orion screening, explained</h3><p>What the Career Assessment and Technical Screening actually test — and how to prepare.</p><div class="fn-byline">Rahul K. · 6 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb c"><span class="g">N</span></div><div class="fn-card-body"><div class="fn-cat">Consumers</div><h3>No-code that survives contact with IT</h3><p>Building workflows your security team will actually let you ship.</p><div class="fn-byline">Varun M. · 5 min</div></div></article>
+      <article class="fn-card glass"><div class="fn-thumb s"><span class="g">P</span></div><div class="fn-card-body"><div class="fn-cat">Hiring</div><h3>A portfolio project that gets callbacks</h3><p>What separates a repo that reads as a demo from one that reads as production.</p><div class="fn-byline">Mani N. · 7 min</div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="position:relative;overflow:hidden">
+  <div class="bloom-field" aria-hidden="true" style="opacity:.5"><span></span></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="news glass">
+      <h3>Field notes, <span class="em">twice a month.</span></h3>
+      <p>New cohorts, masterclass dates, and what's actually shipping. No noise.</p>
+      <form data-form="newsletter" data-success="You&#39;re subscribed — field notes land twice a month." novalidate>
+        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
+        <input name="email" class="news-input" type="email" placeholder="you@company.com">
+        <button class="btn btn-primary" data-toast="You're subscribed — field notes land twice a month.">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="about.html" style="color:var(--copper-light)">About</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+  <script src="forms.js" defer></script>
+</body>
+</html>

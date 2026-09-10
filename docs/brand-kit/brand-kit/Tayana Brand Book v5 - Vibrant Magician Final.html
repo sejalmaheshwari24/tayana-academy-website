@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tayana Academy · Brand Book v5 · Vibrant Magician</title>
+<meta name="description" content="Tayana Academy Brand Book v4. Direction A · Vibrant Magician. Production-ready brand system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* === DIRECTION A · VIBRANT MAGICIAN · TOKEN ROOT === */
+:root {
+  /* Surfaces */
+  --canvas: #FFFEFA;          /* primary off-white canvas */
+  --paper:  #FFFFFF;          /* card / paper */
+  --lms-bg: #FAFAF7;          /* LMS reading surface · slightly warmer */
+  --ink:    #0E0E14;          /* primary dark · headlines · marketing hero canvas */
+  --ink-lift: #1A1A22;        /* dark panels */
+  --ink-border: #2A2A33;
+  --muted-line: rgba(14,14,20,.08);
+
+  /* Type colors */
+  --body: #1A1A1F;            /* body text on light */
+  --body-light: #F4F2EE;      /* body text on dark */
+  --muted: #6B6F76;           /* secondary text */
+  --muted-light: #B8B8BE;     /* secondary on dark */
+
+  /* Pillar accents (the soul of Direction A) */
+  --indigo: #5B47FF;          /* Builders pillar primary · primary CTA */
+  --indigo-deep: #3A28D9;
+  --indigo-soft: #E8E2FF;
+  --spring: #9EE89C;          /* Consumers pillar primary */
+  --spring-deep: #4FB04C;
+  --spring-soft: #DDF7DC;
+  --sun: #FFD23F;             /* attention chip · cohort badges */
+  --sun-deep: #C99A00;
+  --sun-soft: #FFF1B8;
+  --coral: #FF6B47;           /* moments accent · success markers */
+  --coral-deep: #C9462A;
+  --coral-soft: #FFD9CC;
+
+  /* Type */
+  --display: 'Inter', -apple-system, system-ui, sans-serif;
+  --body-font: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  --serif: 'Instrument Serif', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body-font);
+  background: var(--canvas);
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === LAYOUT === */
+.shell { display: grid; grid-template-columns: 280px 1fr; gap: 0; min-height: 100vh; }
+nav.toc {
+  background: var(--ink);
+  color: var(--body-light);
+  padding: 36px 24px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+nav.toc .brand {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  color: white;
+  margin-bottom: 4px;
+}
+nav.toc .brand-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+nav.toc .ver {
+  background: var(--indigo);
+  color: white;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+nav.toc ol { list-style: none; counter-reset: toc; }
+nav.toc ol li {
+  counter-increment: toc;
+  margin-bottom: 4px;
+}
+nav.toc ol li a {
+  display: block;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--muted-light);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all .2s;
+}
+nav.toc ol li a:hover { background: var(--ink-lift); color: white; }
+nav.toc ol li a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--indigo);
+  margin-right: 10px;
+}
+.toc-meta {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink-border);
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted-light);
+  line-height: 1.7;
+}
+
+main { padding: 0; }
+.section { padding: 80px 64px; border-bottom: 1px solid var(--muted-line); }
+.section.dark { background: var(--ink); color: var(--body-light); border-bottom-color: var(--ink-border); }
+.section.cream { background: var(--canvas); }
+.section.lms { background: var(--lms-bg); }
+.section.indigo-bleed { background: var(--indigo); color: white; border-bottom: none; }
+.section.spring-bleed { background: var(--spring); color: var(--ink); }
+.section.sun-bleed { background: var(--sun); color: var(--ink); }
+.section.coral-bleed { background: var(--coral); color: white; }
+
+/* === COVER === */
+.cover {
+  background: var(--ink);
+  color: var(--body-light);
+  min-height: 100vh;
+  padding: 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before, .cover::after {
+  content: ''; position: absolute; border-radius: 50%; filter: blur(80px); opacity: .35; pointer-events: none;
+}
+.cover::before { width: 480px; height: 480px; background: var(--indigo); top: -120px; right: -120px; }
+.cover::after { width: 380px; height: 380px; background: var(--spring); bottom: -100px; left: -100px; opacity: .25; }
+.cover .corner-marker { display: flex; gap: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--muted-light); text-transform: uppercase; z-index: 2; }
+.cover .corner-marker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--indigo); }
+.cover-body { z-index: 2; }
+.cover h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 1.0;
+  letter-spacing: -3.4px;
+  color: white;
+  margin-bottom: 24px;
+}
+.cover h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--indigo); }
+.cover h1 .spring { color: var(--spring); }
+.cover h1 .sun { color: var(--sun); }
+.cover .lede {
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--muted-light);
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+.cv-meta {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--ink-border); border: 1px solid var(--ink-border); border-radius: 12px;
+  overflow: hidden; max-width: 800px;
+  z-index: 2;
+}
+.cv-meta-cell { background: var(--ink-lift); padding: 18px 22px; }
+.cv-meta-cell .lbl { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--indigo); text-transform: uppercase; margin-bottom: 6px; }
+.cv-meta-cell .val { font-family: var(--display); font-weight: 700; font-size: 15px; color: white; }
+.cover-foot {
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* === SECTION NUMBER + HEADING === */
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.dark .section-num { color: var(--spring); }
+.indigo-bleed .section-num { color: var(--sun); }
+.spring-bleed .section-num { color: var(--ink); }
+h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.02;
+  letter-spacing: -2.2px;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--indigo); }
+.dark h1 { color: white; }
+.dark h1 em { color: var(--spring); }
+h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  margin: 48px 0 16px;
+  color: var(--ink);
+}
+h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--indigo); }
+.dark h2 { color: white; }
+h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.4px;
+}
+.lede { font-family: var(--display); font-size: 19px; line-height: 1.55; color: var(--muted); max-width: 780px; margin-bottom: 32px; }
+.dark .lede { color: var(--muted-light); }
+p { margin-bottom: 14px; }
+
+/* === Plus-corner frame === */
+.frame { position: relative; padding: 24px; }
+.frame::before, .frame::after, .frame .cb-bl, .frame .cb-br {
+  content: ''; position: absolute; width: 10px; height: 10px; border: 2px solid var(--indigo);
+}
+.frame::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.frame::after { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.frame .cb-bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.frame .cb-br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+/* === Tag (eyebrow / chip) === */
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: var(--indigo-soft);
+  color: var(--indigo-deep);
+  margin-bottom: 14px;
+}
+.tag.spring { background: var(--spring-soft); color: var(--spring-deep); }
+.tag.sun { background: var(--sun-soft); color: var(--sun-deep); }
+.tag.coral { background: var(--coral-soft); color: var(--coral-deep); }
+.tag.dark { background: var(--ink); color: var(--spring); }
+
+/* === Color Swatches === */
+.swatch-grid { display: grid; gap: 12px; margin-bottom: 24px; }
+.swatch-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.swatch-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.swatch-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
+.swatch {
+  border-radius: 10px;
+  padding: 24px 20px;
+  min-height: 140px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative;
+}
+.sw-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; opacity: .85; }
+.sw-hex { font-family: var(--mono); font-size: 13px; font-weight: 600; margin-top: 4px; }
+.sw-aa { font-family: var(--mono); font-size: 11px; font-weight: 700; opacity: .8; }
+.sw-name { font-family: var(--display); font-weight: 800; font-size: 18px; letter-spacing: -0.4px; }
+
+/* === Type scale === */
+.type-scale { display: grid; gap: 18px; padding: 24px 0; }
+.type-row {
+  display: grid; grid-template-columns: 200px 1fr;
+  align-items: baseline; gap: 24px;
+  padding: 18px 0; border-bottom: 1px dashed var(--muted-line);
+}
+.type-row .info {
+  font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase;
+}
+.type-row .sample-h1 { font-family: var(--display); font-weight: 900; font-size: 72px; line-height: 1.02; letter-spacing: -2.4px; color: var(--ink); }
+.type-row .sample-h2 { font-family: var(--display); font-weight: 800; font-size: 48px; line-height: 1.05; letter-spacing: -1.5px; color: var(--ink); }
+.type-row .sample-h3 { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--ink); }
+.type-row .sample-body { font-family: var(--display); font-size: 17px; line-height: 1.65; color: var(--body); max-width: 580px; }
+.type-row .sample-mono { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; color: var(--indigo); text-transform: uppercase; font-weight: 600; }
+.type-row .sample-italic { font-family: var(--serif); font-style: italic; font-size: 30px; color: var(--indigo); }
+
+/* === Do/Dont === */
+.do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.dd-card {
+  background: var(--paper); border-radius: 12px; padding: 28px; border: 1px solid var(--muted-line);
+}
+.dd-card.do { border-color: var(--spring-deep); }
+.dd-card.dont { border-color: var(--coral-deep); }
+.dd-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 14px; display: inline-block; padding: 5px 11px; border-radius: 4px;
+}
+.dd-card.do .dd-label { background: var(--spring-soft); color: var(--spring-deep); }
+.dd-card.dont .dd-label { background: var(--coral-soft); color: var(--coral-deep); }
+.dd-card ul { list-style: none; }
+.dd-card li {
+  font-size: 14px; line-height: 1.55; padding: 8px 0 8px 22px; position: relative; color: var(--body);
+}
+.dd-card.do li::before { content: '✓'; color: var(--spring-deep); position: absolute; left: 0; font-weight: 800; }
+.dd-card.dont li::before { content: '✕'; color: var(--coral-deep); position: absolute; left: 0; font-weight: 800; }
+
+/* === Pillar cards (Builders + Consumers) === */
+.pillar-card {
+  border-radius: 16px;
+  padding: 48px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.pillar-card.builders { background: var(--indigo); }
+.pillar-card.consumers { background: var(--spring); color: var(--ink); }
+.pillar-card::before {
+  content: ''; position: absolute; right: -50px; top: -50px;
+  width: 280px; height: 280px; border-radius: 50%;
+  background: rgba(255,255,255,.08);
+}
+.pillar-card.consumers::before { background: rgba(14,14,20,.06); }
+.pillar-card h2 { color: white; font-size: 56px; margin-bottom: 12px; }
+.pillar-card.consumers h2 { color: var(--ink); }
+.pillar-card .pillar-tag {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+  text-transform: uppercase; font-weight: 600; margin-bottom: 16px;
+  color: rgba(255,255,255,.7);
+}
+.pillar-card.consumers .pillar-tag { color: var(--ink); opacity: .65; }
+.pillar-attr { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15); font-size: 15px; }
+.pillar-card.consumers .pillar-attr { border-bottom-color: rgba(14,14,20,.12); }
+.pillar-attr .attr-lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; opacity: .75; }
+
+/* === Application templates === */
+.app-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 24px; }
+.app-card {
+  border-radius: 14px; padding: 32px 28px; min-height: 280px; position: relative;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.app-social { background: var(--ink); color: white; }
+.app-slide { background: var(--canvas); border: 1px solid var(--muted-line); }
+.app-email { background: var(--paper); border: 1px solid var(--muted-line); }
+.app-card .ap-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; margin-bottom: 12px; }
+.app-card h3 { font-size: 24px; line-height: 1.15; letter-spacing: -0.6px; margin-bottom: 12px; }
+.app-card .body { font-family: var(--mono); font-size: 12px; line-height: 1.55; opacity: .85; }
+.app-card .cta-mini {
+  display: inline-block; margin-top: 14px; padding: 8px 14px; border-radius: 100px;
+  font-family: var(--display); font-weight: 600; font-size: 12px;
+}
+.app-social .cta-mini { background: var(--indigo); color: white; }
+.app-slide .cta-mini { background: var(--ink); color: white; }
+.app-email .cta-mini { background: var(--indigo); color: white; }
+
+/* === Mood reference card === */
+.mood-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+.mood-card {
+  background: var(--paper); border: 1px solid var(--muted-line); border-radius: 12px; padding: 24px;
+}
+.mood-card .mood-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--indigo); text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+.mood-card h4 { font-family: var(--display); font-weight: 800; font-size: 18px; margin-bottom: 8px; }
+.mood-card p { font-size: 13px; line-height: 1.55; color: var(--muted); margin-bottom: 0; }
+
+/* === Component examples === */
+.comp-row { display: grid; gap: 18px; margin: 24px 0; padding: 28px; background: var(--paper); border: 1px solid var(--muted-line); border-radius: 12px; }
+.comp-row .comp-label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; font-weight: 600; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px; border-radius: 100px;
+  font-family: var(--display); font-weight: 600; font-size: 14px;
+  text-decoration: none; border: none; cursor: pointer; transition: all .2s;
+}
+.btn-primary { background: var(--indigo); color: white; }
+.btn-primary:hover { background: var(--indigo-deep); }
+.btn-secondary { background: var(--ink); color: white; }
+.btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.btn-success { background: var(--spring); color: var(--ink); }
+.btn-coral { background: var(--coral); color: white; }
+.btn-sun { background: var(--sun); color: var(--ink); }
+
+/* === WCAG table === */
+.wcag {
+  width: 100%; border-collapse: collapse; margin-top: 24px;
+  border-radius: 12px; overflow: hidden; border: 1px solid var(--muted-line);
+}
+.wcag th, .wcag td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--muted-line); font-size: 13px; }
+.wcag th { background: var(--ink); color: white; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+.wcag td .badge {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  padding: 3px 8px; border-radius: 4px;
+}
+.wcag td .badge.pass { background: var(--spring-soft); color: var(--spring-deep); }
+.wcag td .badge.aaa { background: var(--indigo-soft); color: var(--indigo-deep); }
+.wcag td .badge.warn { background: var(--sun-soft); color: var(--sun-deep); }
+.wcag td .badge.fail { background: var(--coral-soft); color: var(--coral-deep); }
+
+/* === Callout === */
+.callout {
+  background: var(--indigo-soft);
+  border-left: 4px solid var(--indigo);
+  padding: 20px 24px;
+  border-radius: 0 12px 12px 0;
+  margin: 24px 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.callout.coral { background: var(--coral-soft); border-left-color: var(--coral); }
+.callout.spring { background: var(--spring-soft); border-left-color: var(--spring-deep); }
+.callout.sun { background: var(--sun-soft); border-left-color: var(--sun-deep); }
+.callout strong { font-weight: 700; }
+
+/* === Manifesto === */
+.manifesto-block {
+  font-family: var(--display); font-weight: 800; font-size: 72px;
+  line-height: 1.05; letter-spacing: -2.6px;
+  color: var(--ink); max-width: 1080px;
+}
+.manifesto-block em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--indigo); }
+.manifesto-block .spring { color: var(--spring-deep); }
+.manifesto-block .coral { color: var(--coral-deep); }
+.manifesto-sig {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted); margin-top: 32px;
+}
+
+/* === Essence table === */
+.essence {
+  width: 100%; border-collapse: collapse;
+  margin-top: 18px;
+}
+.essence td {
+  padding: 18px 0; border-bottom: 1px solid var(--muted-line);
+  vertical-align: top;
+}
+.essence td:first-child {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+  color: var(--indigo); text-transform: uppercase; font-weight: 600;
+  width: 200px; padding-right: 24px;
+}
+.essence td:last-child {
+  font-family: var(--display); font-size: 17px; line-height: 1.55;
+}
+
+/* === Architecture layer model === */
+.layer-grid {
+  background: var(--paper); border: 1px solid var(--muted-line); border-radius: 12px; overflow: hidden;
+}
+.layer-row {
+  display: grid; grid-template-columns: 90px 280px 1fr 200px;
+  padding: 22px 24px; border-bottom: 1px solid var(--muted-line); align-items: center; gap: 18px;
+}
+.layer-row:last-child { border-bottom: none; }
+.layer-row.master { background: var(--indigo); color: white; }
+.layer-row.pillar { background: var(--indigo-soft); }
+.layer-row.consumers-pillar { background: var(--spring-soft); }
+.layer-row .ln {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+  font-weight: 700; opacity: .9;
+}
+.layer-row .name { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.layer-row .desc { font-size: 13px; line-height: 1.5; opacity: .85; }
+.layer-row .stat {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; opacity: .7; text-align: right;
+}
+
+/* === Footer === */
+footer {
+  background: var(--ink);
+  color: var(--muted-light);
+  padding: 48px 64px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;
+}
+footer .indigo-bar {
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--indigo), var(--spring), var(--sun), var(--coral));
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1100px) {
+  .shell { grid-template-columns: 1fr; }
+  nav.toc { position: relative; height: auto; }
+  .section { padding: 64px 32px; }
+  h1 { font-size: 44px; letter-spacing: -1.5px; }
+  .cover h1 { font-size: 56px; }
+  .swatch-grid.cols-4, .swatch-grid.cols-5 { grid-template-columns: repeat(2, 1fr); }
+  .do-dont, .app-grid, .mood-grid { grid-template-columns: 1fr; }
+  .layer-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+<!-- ==================== TOC ==================== -->
+<nav class="toc">
+  <div class="brand">Tayana Academy</div>
+  <div class="brand-sub">Brand Book</div>
+  <div class="ver">v5 · Vibrant Magician</div>
+  <ol>
+    <li><a href="#cover">Cover</a></li>
+    <li><a href="#brief">Brief · what changed</a></li>
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#essence">Brand Essence</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#color">Color System</a></li>
+    <li><a href="#wcag">WCAG Combinations</a></li>
+    <li><a href="#type">Typography</a></li>
+    <li><a href="#voice">Voice &amp; Tone</a></li>
+    <li><a href="#builders">Pillar · Builders</a></li>
+    <li><a href="#consumers">Pillar · Consumers</a></li>
+    <li><a href="#layout">Layout Primitives</a></li>
+    <li><a href="#material">Surface · Liquid Glass</a></li>
+    <li><a href="#components">Component Library</a></li>
+    <li><a href="#applications">Application Templates</a></li>
+    <li><a href="#photography">Photography</a></li>
+    <li><a href="#mood">Mood Boards</a></li>
+    <li><a href="#icons">Iconography</a></li>
+    <li><a href="#motion">Motion Principles</a></li>
+    <li><a href="#comm">Communication Layers</a></li>
+    <li><a href="#subbrand">Sub-brand Rules</a></li>
+    <li><a href="#assets">Production Assets</a></li>
+    <li><a href="#forbidden">Forbidden Patterns</a></li>
+  </ol>
+  <div class="toc-meta">
+    Version 5.0 · Direction A · Light<br>
+    2026-06-04<br>
+    Archetype · Magician<br>
+    Logo · locked<br>
+    Vishal × Team
+  </div>
+</nav>
+
+<main>
+
+<!-- ==================== COVER ==================== -->
+<section class="cover" id="cover">
+  <div class="corner-marker">
+    <span class="dot"></span>
+    <span>Brand Book · v4 · Direction A · Vibrant Magician</span>
+  </div>
+  <div class="cover-body">
+    <div class="tag dark">An academy for the AI era</div>
+    <h1>Engineer the<br>career. <em class="spring">Ship</em><br>the work.</h1>
+    <p class="lede">Tayana Academy · Brand Book v4. The vibrant Magician direction, locked from team feedback. Multi-color, modern, outcome-led — built to honor screen-fatigue on Orion and certificate-grade premium on print. Production-ready brand system.</p>
+    <div class="cv-meta">
+      <div class="cv-meta-cell"><div class="lbl">Version</div><div class="val">4.0 · Vibrant Magician</div></div>
+      <div class="cv-meta-cell"><div class="lbl">Issued</div><div class="val">2026-06-04</div></div>
+      <div class="cv-meta-cell"><div class="lbl">Archetype</div><div class="val">Magician × open</div></div>
+      <div class="cv-meta-cell"><div class="lbl">Status</div><div class="val">Team-pick · awaiting Sharad</div></div>
+    </div>
+  </div>
+  <div class="cover-foot">
+    <span>Tayana Academy</span>
+    <span>tayanaacademy.com</span>
+    <span>© 2026</span>
+  </div>
+</section>
+
+<!-- ==================== BRIEF ==================== -->
+<section class="section" id="brief">
+  <div class="section-num">02 · The Brief</div>
+  <h1>What changed from <em>v3.2.</em></h1>
+  <p class="lede">v4 is a direction reset, not a structural rebuild. The 23-section brand book skeleton is intact. The voice, palette, and visual register move from the warm-editorial Sage × Mentor archetype to the vibrant multi-color Magician archetype, locked from team feedback.</p>
+
+  <div class="callout">
+    <strong>This book carries forward:</strong> 20-section site structure · Builders &amp; Consumers pillar architecture · 24-cohorts-per-year cadence · trade-secret-protected content model · Inter + JetBrains Mono + Instrument Serif type stack · the strict no-AI-suffix rule · WCAG AA targets.
+  </div>
+  <div class="callout coral">
+    <strong>This book replaces:</strong> warm Foundry Materials palette (Iron/Copper/Brass) → vibrant Magician palette (Indigo/Spring/Sun/Coral on cream + Ink) · editorial-restrained voice → vibrant outcome-led voice · monochrome-medal logo lock → pending logo direction (interim mark stays).
+  </div>
+
+  <h2>Why we moved</h2>
+  <p>Consolidated team feedback called the v3.2 direction "dull, old-fashioned, and not academy enough for a modern AI institution." The team picked <strong>Direction A · Vibrant Magician</strong> from the Palette Triangle. Vishal noted a personal preference for Direction C (Magician × Sage Hybrid) — captured in open items, can swap palette tokens in if Sharad lands there.</p>
+  <p>This book ships as the production reference for Direction A. The structure is portable — if Sharad locks C later, the token swap is a 30-minute job, not a rebuild.</p>
+
+  <h2>What's locked in v5</h2>
+  <p><strong>Palette.</strong> Direction A · Vibrant Magician on light mode is confirmed as the production direction. <strong>Logo.</strong> The interim wordmark and retired Circle Medal are replaced by the locked symbol-led mark (§06). <strong>Surface material.</strong> Liquid glass is adopted as the site's signature chrome (§14). Remaining open items — icon library commission and photography shoot — are tracked in the companion status doc.</p>
+</section>
+
+<!-- ==================== MANIFESTO ==================== -->
+<section class="section dark" id="manifesto">
+  <div class="section-num">03 · Manifesto</div>
+  <div class="manifesto-block">
+    Some people <em>build</em> AI.<br>
+    Others <span class="spring">use it</span> in the role they<br>
+    already have. <span class="coral">Both</span> need<br>
+    <em>work,</em> not theory.
+  </div>
+  <div class="manifesto-sig">— Tayana Academy · v4 · 2026</div>
+</section>
+
+<!-- ==================== ESSENCE ==================== -->
+<section class="section cream" id="essence">
+  <div class="section-num">04 · Brand Essence</div>
+  <h1>Eight rows. <em>One brand.</em></h1>
+  <p class="lede">The complete vector for every decision downstream. If a design choice breaks any of these rows, the choice is wrong — not the row.</p>
+  <table class="essence">
+    <tr><td>Mission</td><td>Make AI work accessible to anyone who wants to build it — or apply it — in the role they already have.</td></tr>
+    <tr><td>Vision</td><td>The default academy of the AI era. Two pillars. Twenty-four cohorts a year. Outcomes that print on the certificate and show up in the paycheck.</td></tr>
+    <tr><td>Promise</td><td>Trusted intelligence. Verified outcomes.</td></tr>
+    <tr><td>Archetype</td><td>Magician · transformation-led, outcome-first, vivid. Secondary anchor: Sage (institutional gravitas).</td></tr>
+    <tr><td>Voice</td><td>Direct. Outcome-led. Energetic but precise. Speaks like a working operator, not a recruiter.</td></tr>
+    <tr><td>Tagline</td><td>"Engineer the career. Ship the work." (Builders) · "AI for your role, not AI in general." (Consumers)</td></tr>
+    <tr><td>Personality</td><td>Modern · multi-color · alive · serious about outcomes · warm at the human moments.</td></tr>
+    <tr><td>Audience</td><td>Candidate learners (final-year grads · OPT/CPT · senior devs) + corporate buyers (BFSI L&amp;D heads · ops directors · COOs). One brand. Two reads. Both land.</td></tr>
+  </table>
+</section>
+
+<!-- ==================== ARCHITECTURE ==================== -->
+<section class="section" id="architecture">
+  <div class="section-num">05 · Architecture</div>
+  <h1>Master · two pillars · <em>four layers.</em></h1>
+  <p class="lede">Tayana Academy is one brand. Two pillars (Builders + Consumers) own audience identity. Four communication layers (audience · industry · geography · product) carry seasonal meaning. The architecture protects the brand from fragmentation as we scale.</p>
+  <div class="layer-grid">
+    <div class="layer-row master">
+      <div class="ln">L1</div>
+      <div class="name">Master</div>
+      <div class="desc">Tayana Academy. One mark. One promise. Owns the institutional read.</div>
+      <div class="stat">Brand owned</div>
+    </div>
+    <div class="layer-row pillar">
+      <div class="ln">L2</div>
+      <div class="name">Pillar · Builders</div>
+      <div class="desc">For people entering AI careers. Indigo accent. 4–6 week cohorts. Project portfolio + placement pathway.</div>
+      <div class="stat">Pillar owned</div>
+    </div>
+    <div class="layer-row consumers-pillar">
+      <div class="ln">L2</div>
+      <div class="name">Pillar · Consumers</div>
+      <div class="desc">For people applying AI in their role. Spring accent. 30-day cohorts. Workflows shipped to production.</div>
+      <div class="stat">Pillar owned</div>
+    </div>
+    <div class="layer-row">
+      <div class="ln">L3</div>
+      <div class="name">Audience</div>
+      <div class="desc">Candidate-learner read vs corporate-buyer read. Voice + photography flex per audience, palette holds.</div>
+      <div class="stat">Comm layer</div>
+    </div>
+    <div class="layer-row">
+      <div class="ln">L4</div>
+      <div class="name">Industry</div>
+      <div class="desc">BFSI · ops · HR · marketing · healthcare for Consumers; cohort theme for Builders.</div>
+      <div class="stat">Comm layer</div>
+    </div>
+    <div class="layer-row">
+      <div class="ln">L5</div>
+      <div class="name">Geography</div>
+      <div class="desc">India · United States · Canada · global. Same brand. Local proof points.</div>
+      <div class="stat">Comm layer</div>
+    </div>
+    <div class="layer-row">
+      <div class="ln">L6</div>
+      <div class="name">Product · Cohorts</div>
+      <div class="desc">Cohort 09, Cohort 10 etc. Season-specific. Same brand mechanics, fresh content.</div>
+      <div class="stat">Seasonal</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LOGO ==================== -->
+<section class="section cream" id="logo">
+  <div class="section-num">06 · Logo</div>
+  <h1>The mark, <em>locked.</em></h1>
+  <div class="callout spring">
+    <strong>Status · locked.</strong> The interim wordmark and the retired v3.2 Circle Medal are both replaced. This symbol-led mark fits the Vibrant Magician register and passes every Constraints Memo gate: 16px favicon · single-colour print · circular avatar · Outlook-safe SVG.
+  </div>
+  <p class="lede">A mortarboard cap names the academy; three ascending bars carry the architecture — Indigo Builders and Spring Consumers rising on either side of the Ink anchor, with one Sun tassel for the credential. Two pillars, one academy.</p>
+
+  <h2>Primary lockup</h2>
+  <div style="background: var(--canvas); padding: 72px 64px; border-radius: 16px; margin: 18px 0; display:flex; align-items:center; justify-content:center; gap:20px; border:1px solid var(--muted-line);">
+    <svg viewBox="0 0 48 48" width="88" height="88" aria-label="Tayana Academy"><path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#5B47FF"/><circle cx="24" cy="15.5" r="1.8" fill="#0E0E14"/><path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#0E0E14" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M43.5 15.5 V25.5" stroke="#4FB04C" stroke-width="2" stroke-linecap="round"/><circle cx="43.5" cy="27.6" r="2.1" fill="#FFD23F"/><rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#5B47FF"/><rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#0E0E14"/><rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#4FB04C"/></svg>
+    <div style="display:flex; flex-direction:column; line-height:1;">
+      <span style="font-family: var(--display); font-weight: 800; font-size: 34px; letter-spacing: -0.6px; color: var(--ink);">Tayana</span>
+      <span style="font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--indigo); margin-top: 6px;">Academy</span>
+    </div>
+  </div>
+
+  <h2>Three colourways</h2>
+  <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 18px;">
+    <div style="background: #fff; padding: 48px 24px; border-radius: 12px; border: 1px solid var(--muted-line); text-align: center;">
+      <svg viewBox="0 0 48 48" width="84" height="84"><path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#5B47FF"/><circle cx="24" cy="15.5" r="1.8" fill="#0E0E14"/><path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#0E0E14" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M43.5 15.5 V25.5" stroke="#4FB04C" stroke-width="2" stroke-linecap="round"/><circle cx="43.5" cy="27.6" r="2.1" fill="#FFD23F"/><rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#5B47FF"/><rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#0E0E14"/><rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#4FB04C"/></svg>
+      <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 20px;">Full colour · on light</div>
+    </div>
+    <div style="background: var(--canvas); padding: 48px 24px; border-radius: 12px; border: 1px solid var(--muted-line); text-align: center;">
+      <svg viewBox="0 0 48 48" width="84" height="84"><path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#0E0E14"/><circle cx="24" cy="15.5" r="1.8" fill="#FFFEFA"/><path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#0E0E14" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M43.5 15.5 V25.5" stroke="#0E0E14" stroke-width="2" stroke-linecap="round"/><circle cx="43.5" cy="27.6" r="2.1" fill="#0E0E14"/><rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#0E0E14"/><rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#0E0E14"/><rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#0E0E14"/></svg>
+      <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 20px;">Mono ink · print</div>
+    </div>
+    <div style="background: var(--ink); padding: 48px 24px; border-radius: 12px; text-align: center;">
+      <svg viewBox="0 0 48 48" width="84" height="84"><path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#FFFFFF"/><circle cx="24" cy="15.5" r="1.8" fill="#0E0E14"/><path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M43.5 15.5 V25.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><circle cx="43.5" cy="27.6" r="2.1" fill="#FFFFFF"/><rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#FFFFFF"/><rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#FFFFFF"/><rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#FFFFFF"/></svg>
+      <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--muted-light); margin-top: 20px;">Reversed · on Ink / photo</div>
+    </div>
+  </div>
+
+  <h2>Clear space, sizing &amp; rules</h2>
+  <p>Clear space = one cap-width on every side. Minimum mark size 16px — at favicon scale the tassel drops and the cap plus three bars still read. Never skew, rotate, add shadow/3D, recolour off-palette, or append "AI". Full lockups, favicon grid and don'ts live in the companion <strong>Tayana Logo Sheet</strong> (print-ready). Production marks ship as <span style="font-family:var(--mono);font-size:13px;">tayana-mark.svg · tayana-mark-mono.svg · tayana-mark-white.svg</span>.</p>
+</section>
+
+<!-- ==================== COLOR ==================== -->
+<section class="section cream" id="color">
+  <div class="section-num">07 · Color System</div>
+  <h1>Vibrant <em>Magician.</em></h1>
+  <p class="lede">Off-white canvas. Ink for text and marketing hero canvas. Indigo as primary action. Spring as Consumers pillar + success. Sun as attention. Coral as moments. Steel as muted. No saturated bright as long-form background — vibrant lives in moments, never behind sustained reading.</p>
+
+  <h2>Surfaces</h2>
+  <div class="swatch-grid cols-4">
+    <div class="swatch" style="background: var(--canvas); color: var(--ink); border: 1px solid var(--muted-line);">
+      <span class="sw-tag">Canvas</span>
+      <div><div class="sw-name">Off-white</div><div class="sw-hex">#FFFEFA</div></div>
+    </div>
+    <div class="swatch" style="background: var(--paper); color: var(--ink); border: 1px solid var(--muted-line);">
+      <span class="sw-tag">Paper</span>
+      <div><div class="sw-name">Card</div><div class="sw-hex">#FFFFFF</div></div>
+    </div>
+    <div class="swatch" style="background: var(--lms-bg); color: var(--ink); border: 1px solid var(--muted-line);">
+      <span class="sw-tag">Orion bg</span>
+      <div><div class="sw-name">LMS warm</div><div class="sw-hex">#FAFAF7</div></div>
+    </div>
+    <div class="swatch" style="background: var(--ink); color: white;">
+      <span class="sw-tag">Marketing canvas</span>
+      <div><div class="sw-name">Ink</div><div class="sw-hex">#0E0E14</div></div>
+    </div>
+  </div>
+
+  <h2>Pillar accents · dark surfaces</h2>
+  <p class="lede">These are the accents as they appear <strong>on dark and on imagery</strong> —
+  the values used in this book's own layouts and in the site's dark surfaces. On the light
+  canvas the pillars shift darker for contrast; see <em>Pillar accents · light canvas</em> below.
+  The two sets are one system, tuned per surface — never mix a light-canvas value onto dark.</p>
+  <div class="swatch-grid cols-4">
+    <div class="swatch" style="background: var(--indigo); color: white;">
+      <span class="sw-tag">Primary · Builders</span>
+      <div><div class="sw-name">Indigo</div><div class="sw-hex">#5B47FF</div></div>
+    </div>
+    <div class="swatch" style="background: var(--spring); color: var(--ink);">
+      <span class="sw-tag">Pillar · Consumers · Success</span>
+      <div><div class="sw-name">Spring</div><div class="sw-hex">#9EE89C</div></div>
+    </div>
+    <div class="swatch" style="background: var(--sun); color: var(--ink);">
+      <span class="sw-tag">Attention</span>
+      <div><div class="sw-name">Sun</div><div class="sw-hex">#FFD23F</div></div>
+    </div>
+    <div class="swatch" style="background: var(--coral); color: white;">
+      <span class="sw-tag">Moments</span>
+      <div><div class="sw-name">Coral</div><div class="sw-hex">#FF6B47</div></div>
+    </div>
+  </div>
+
+  <h2>Pillar accents · light canvas</h2>
+  <p class="lede">What the website actually ships on the off-white canvas (<code>--ash #F8F8F6</code>).
+  Both pillars are darkened so accent-as-text and white-on-accent stay legible. These are the
+  values in <code>ds-tokens.css</code>; the legacy token names there are
+  <code>--copper</code> (Builders) and <code>--brass</code> (Consumers).</p>
+  <div class="swatch-grid cols-4">
+    <div class="swatch" style="background:#4A38E8; color:#fff;">
+      <span class="sw-tag">Primary · Builders · light</span>
+      <div><div class="sw-name">Indigo (light canvas)</div><div class="sw-hex">#4A38E8</div></div>
+    </div>
+    <div class="swatch" style="background:#368634; color:#fff;">
+      <span class="sw-tag">Pillar · Consumers · light</span>
+      <div><div class="sw-name">Spring (light canvas)</div><div class="sw-hex">#368634</div></div>
+    </div>
+    <div class="swatch" style="background:#FFD23F; color:#1C1D22;">
+      <span class="sw-tag">Attention · unchanged</span>
+      <div><div class="sw-name">Sun</div><div class="sw-hex">#FFD23F</div></div>
+    </div>
+    <div class="swatch" style="background:#E5533A; color:#fff;">
+      <span class="sw-tag">Moments · light</span>
+      <div><div class="sw-name">Ember</div><div class="sw-hex">#E5533A</div></div>
+    </div>
+  </div>
+  <p class="lede"><strong>Measured contrast</strong> (WCAG 2.1; AA needs 4.5 for normal text, 3.0 for large).
+  White on light-canvas Indigo <strong>6.95 ✓</strong>; Indigo as text on ash <strong>6.53 ✓</strong>.
+  White on light-canvas Spring <strong>4.55 ✓</strong> — this is why Spring is #368634 here and not
+  the softer #3A8A38, which measured 4.31 and missed AA. Spring <em>as text</em> on ash is
+  <strong>4.28</strong> (AA Large only), so accent-coloured copy under 24px uses
+  <code>--brass-deep #2B7629</code> (5.30 on ash). The book's dark-surface Spring
+  <code>#9EE89C</code> is a <em>light</em> colour — it takes ink text (11.6 ✓) and must never
+  carry white text.</p>
+
+  <h2>Accent deep + soft variants</h2>
+  <div class="swatch-grid cols-4">
+    <div class="swatch" style="background: var(--indigo-deep); color: white;">
+      <span class="sw-tag">Hover · pressed</span>
+      <div><div class="sw-name">Indigo deep</div><div class="sw-hex">#3A28D9</div></div>
+    </div>
+    <div class="swatch" style="background: var(--indigo-soft); color: var(--indigo-deep);">
+      <span class="sw-tag">Soft surface</span>
+      <div><div class="sw-name">Indigo soft</div><div class="sw-hex">#E8E2FF</div></div>
+    </div>
+    <div class="swatch" style="background: var(--spring-soft); color: var(--spring-deep);">
+      <span class="sw-tag">Soft surface</span>
+      <div><div class="sw-name">Spring soft</div><div class="sw-hex">#DDF7DC</div></div>
+    </div>
+    <div class="swatch" style="background: var(--coral-soft); color: var(--coral-deep);">
+      <span class="sw-tag">Soft surface</span>
+      <div><div class="sw-name">Coral soft</div><div class="sw-hex">#FFD9CC</div></div>
+    </div>
+  </div>
+
+  <h2>Type colors</h2>
+  <div class="swatch-grid cols-4">
+    <div class="swatch" style="background: var(--ink); color: white;">
+      <span class="sw-tag">Body · headings on light</span>
+      <div><div class="sw-name">Ink</div><div class="sw-hex">#0E0E14</div></div>
+    </div>
+    <div class="swatch" style="background: var(--body); color: white;">
+      <span class="sw-tag">Body alt</span>
+      <div><div class="sw-name">Iron body</div><div class="sw-hex">#1A1A1F</div></div>
+    </div>
+    <div class="swatch" style="background: white; color: var(--muted); border: 1px solid var(--muted-line);">
+      <span class="sw-tag">Muted</span>
+      <div><div class="sw-name">Steel</div><div class="sw-hex">#6B6F76</div></div>
+    </div>
+    <div class="swatch" style="background: var(--ink); color: var(--muted-light);">
+      <span class="sw-tag">Body on dark</span>
+      <div><div class="sw-name">Body light</div><div class="sw-hex">#F4F2EE</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WCAG ==================== -->
+<section class="section" id="wcag">
+  <div class="section-num">08 · WCAG Combinations</div>
+  <h1>Accessibility, <em>tested.</em></h1>
+  <p class="lede">Every approved color pairing. AA minimum on body text. AAA target on LMS body. Pillar accents are UI moments — not text — unless paired below.</p>
+  <table class="wcag">
+    <thead>
+      <tr><th>Foreground</th><th>Background</th><th>Use</th><th>Ratio</th><th>Verdict</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ink #0E0E14</td><td>Canvas #FFFEFA</td><td>Body · headings on light</td><td>17.8 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Ink #0E0E14</td><td>Paper #FFFFFF</td><td>Body on card</td><td>18.6 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Body #1A1A1F</td><td>LMS bg #FAFAF7</td><td>LMS body reading · 17–19px</td><td>15.4 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>White</td><td>Indigo #5B47FF</td><td>CTA buttons · primary action</td><td>5.6 : 1</td><td><span class="badge pass">AA</span></td></tr>
+      <tr><td>White</td><td>Ink #0E0E14</td><td>Dark section body</td><td>18.0 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Body light #F4F2EE</td><td>Ink #0E0E14</td><td>Marketing dark hero body</td><td>16.9 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Ink #0E0E14</td><td>Spring #9EE89C</td><td>Consumers pillar text · headings</td><td>11.4 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Ink #0E0E14</td><td>Sun #FFD23F</td><td>Attention chip text</td><td>13.1 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>White</td><td>Coral #FF6B47</td><td>Success / moment buttons</td><td>3.6 : 1</td><td><span class="badge pass">AA Large</span></td></tr>
+      <tr><td>Indigo deep #3A28D9</td><td>Indigo soft #E8E2FF</td><td>Soft pill text</td><td>7.4 : 1</td><td><span class="badge aaa">AAA</span></td></tr>
+      <tr><td>Coral deep #C9462A</td><td>Coral soft #FFD9CC</td><td>Soft pill text</td><td>5.1 : 1</td><td><span class="badge pass">AA</span></td></tr>
+      <tr><td>Indigo #5B47FF</td><td>Canvas #FFFEFA</td><td>Link · emphasis</td><td>4.1 : 1</td><td><span class="badge warn">Large only</span></td></tr>
+      <tr><td>Sun #FFD23F</td><td>White</td><td>NEVER on white text</td><td>1.6 : 1</td><td><span class="badge fail">FAIL</span></td></tr>
+    </tbody>
+  </table>
+  <div class="callout coral">
+    <strong>Forbidden combinations:</strong> Sun on white as text · Spring on white as small text · Indigo on Spring (vibrates) · Coral on Sun · any pillar accent used as long-form body text on light backgrounds.
+  </div>
+</section>
+
+<!-- ==================== TYPOGRAPHY ==================== -->
+<section class="section cream" id="type">
+  <div class="section-num">09 · Typography</div>
+  <h1>Inter. JetBrains Mono. <em>Instrument Serif.</em></h1>
+  <p class="lede">Three families. One stack. Inter does the work. JetBrains Mono is the institutional voice on labels and metadata. Instrument Serif italic delivers the brand moments — sparingly, in H1/H2 emphasis spans only.</p>
+
+  <div class="type-scale">
+    <div class="type-row">
+      <div class="info">H1 · Inter 900<br>72px · -2.4 tracking<br>capitalize · line 1.02</div>
+      <div class="sample-h1">Engineer the career.<br>Ship the work.</div>
+    </div>
+    <div class="type-row">
+      <div class="info">H2 · Inter 800<br>48px · -1.5 tracking<br>capitalize · line 1.05</div>
+      <div class="sample-h2">Two pillars · <em style="font-family: var(--serif); font-weight: 400; font-style: italic; color: var(--indigo);">one academy.</em></div>
+    </div>
+    <div class="type-row">
+      <div class="info">H3 · Inter 700<br>26px · -0.5 tracking</div>
+      <div class="sample-h3">For people entering AI careers</div>
+    </div>
+    <div class="type-row">
+      <div class="info">Body · Inter 400<br>17px · 1.65 line</div>
+      <div class="sample-body">Builders is for people entering AI careers — final-year grads, OPT/CPT candidates, working developers adding AI to their stack. Outcome: a project portfolio and a placement pathway. Cohorts run on the 1st and 15th of every month.</div>
+    </div>
+    <div class="type-row">
+      <div class="info">Mono · JetBrains 500<br>11px · 0.14 tracking<br>uppercase</div>
+      <div class="sample-mono">Cohort 09 · Builders · June 2026</div>
+    </div>
+    <div class="type-row">
+      <div class="info">Serif italic accent<br>Instrument Serif 400<br>H1/H2 emphasis spans</div>
+      <div class="sample-italic">ship the work.</div>
+    </div>
+  </div>
+
+  <h2>Rules</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0 10px 22px; position: relative; border-bottom: 1px solid var(--muted-line);"><span style="position: absolute; left: 0; color: var(--indigo); font-weight: 700;">→</span><strong>Capitalize, never UPPERCASE</strong> for H1/H2. Uppercase is for labels and chips only (Mono).</li>
+    <li style="padding: 10px 0 10px 22px; position: relative; border-bottom: 1px solid var(--muted-line);"><span style="position: absolute; left: 0; color: var(--indigo); font-weight: 700;">→</span><strong>Tracking</strong> -2.4 to -3.4 on display (Inter 900). 0.08–0.14 em on Mono labels. 0 on body.</li>
+    <li style="padding: 10px 0 10px 22px; position: relative; border-bottom: 1px solid var(--muted-line);"><span style="position: absolute; left: 0; color: var(--indigo); font-weight: 700;">→</span><strong>Instrument Serif italic</strong> is reserved for one emphasis span per heading. Never in body. Never two spans in the same heading.</li>
+    <li style="padding: 10px 0 10px 22px; position: relative; border-bottom: 1px solid var(--muted-line);"><span style="position: absolute; left: 0; color: var(--indigo); font-weight: 700;">→</span><strong>Body 17px</strong> on marketing, <strong>17–19px</strong> on Orion LMS. Line-height 1.55–1.7.</li>
+    <li style="padding: 10px 0 10px 22px; position: relative;"><span style="position: absolute; left: 0; color: var(--indigo); font-weight: 700;">→</span><strong>Color emphasis</strong> in headings uses Indigo (Builders), Spring (Consumers), Coral (moments), or Ink (default). Never two colors in one heading except the manifesto.</li>
+  </ul>
+</section>
+
+<!-- ==================== VOICE ==================== -->
+<section class="section" id="voice">
+  <div class="section-num">10 · Voice &amp; Tone</div>
+  <h1>Direct. Outcome-led. <em>Alive.</em></h1>
+  <p class="lede">Magician archetype voice: vivid, transformation-led, specific. Speaks like a working operator describing real outcomes — not a recruiter pitching aspirations. Energy comes from precision, not exclamation.</p>
+
+  <h2>Vocabulary chips · what we say</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;">
+    <span class="tag">Ship</span><span class="tag">Engineer</span><span class="tag">Outcome</span>
+    <span class="tag spring">Workflow</span><span class="tag spring">Apply</span><span class="tag spring">Role</span>
+    <span class="tag">Cohort</span><span class="tag">Register</span><span class="tag">Pilot</span>
+    <span class="tag coral">Verified</span><span class="tag coral">Production</span><span class="tag sun">Now</span>
+  </div>
+
+  <h2>Vocabulary blocks · what we don't say</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;">
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Transform</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Journey</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Bootcamp</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Limited seats!</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Unlock</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Game-changing</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Empower</span>
+    <span style="background: var(--coral-soft); color: var(--coral-deep); padding: 6px 12px; border-radius: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;">Best-in-class</span>
+  </div>
+
+  <h2>Do · don't</h2>
+  <div class="do-dont">
+    <div class="dd-card do">
+      <div class="dd-label">Do</div>
+      <ul>
+        <li>Lead with outcomes. "73% reduction in analyst prep time" not "improve productivity"</li>
+        <li>Name the cohort. "Builders Cohort 09" not "our latest batch"</li>
+        <li>Use the second person sparingly. Specificity > you-language</li>
+        <li>Let proof do the persuasion. Numbers · alumni names with consent · pilot results</li>
+        <li>End sentences with periods. Periods are confidence</li>
+        <li>Pick one Instrument Serif italic span per heading. One brand moment, not three</li>
+      </ul>
+    </div>
+    <div class="dd-card dont">
+      <div class="dd-label">Don't</div>
+      <ul>
+        <li>Use exclamation marks. Ever. Energy is in precision, not punctuation</li>
+        <li>Promise "transformation." Promise outcomes</li>
+        <li>Use "bootcamp." Tayana runs cohorts, not bootcamps</li>
+        <li>Manufacture urgency. Cadence is the urgency (1st &amp; 15th)</li>
+        <li>Stack adjectives. "World-class, cutting-edge, transformative" → nothing</li>
+        <li>Use gradients in display copy. One color span per heading, not two</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PILLAR · BUILDERS ==================== -->
+<section class="section cream" id="builders">
+  <div class="section-num">11 · Pillar · Builders</div>
+  <h1>For people <em>entering AI.</em></h1>
+  <p class="lede">Indigo accent. 4–6 week cohorts. Outcome: a project portfolio and a placement pathway. Audiences: final-year grads, OPT/CPT candidates, working developers adding AI to their stack.</p>
+
+  <div class="pillar-card builders">
+    <div class="pillar-tag">→ Pillar 01 · Builders</div>
+    <h2>Engineer the<br>career.</h2>
+    <div class="pillar-attr"><div class="attr-lbl">Archetype</div><div>Magician (Builder secondary)</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Primary color</div><div>Indigo #5B47FF</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Cohort length</div><div>4–6 weeks · 24 per year (1st &amp; 15th of every month)</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Audience</div><div>Final-year engineering grads · OPT/CPT candidates · working developers (3–10 years)</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Outcome</div><div>Project portfolio · recruiter-ready positioning · placement pathway</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Voice</div><div>"Engineer the career. Ship the work." Direct. Operator-to-operator.</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Funnel</div><div>Register for next masterclass → application → cohort placement</div></div>
+    <div class="pillar-attr" style="border-bottom: none;"><div class="attr-lbl">Pricing model</div><div>Partner-revenue model. Pricing varies by track and partnership.</div></div>
+  </div>
+</section>
+
+<!-- ==================== PILLAR · CONSUMERS ==================== -->
+<section class="section" id="consumers">
+  <div class="section-num">12 · Pillar · Consumers</div>
+  <h1>For people <em>applying AI.</em></h1>
+  <p class="lede">Spring accent. 30-day cohorts with optional 2-hour pilot. Outcome: workflows shipped to production. Audiences: finance directors, ops leads, HR heads, L&amp;D managers, marketing leads.</p>
+
+  <div class="pillar-card consumers">
+    <div class="pillar-tag">→ Pillar 02 · Consumers</div>
+    <h2>AI for your role.</h2>
+    <div class="pillar-attr"><div class="attr-lbl">Archetype</div><div>Magician (Realist secondary)</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Primary color</div><div>Spring #9EE89C</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Cohort length</div><div>30 days · optional 2-hour pilot first · 24 per year</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Audience</div><div>Finance directors · ops leads · HR heads · L&amp;D managers · marketing leads</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Outcome</div><div>Workflows shipped to production · ROI measurement · enterprise rollout playbook</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Voice</div><div>"AI for your role, not AI in general." Direct. Workflow-led. Outcome-first.</div></div>
+    <div class="pillar-attr"><div class="attr-lbl">Funnel</div><div>Book a 30-min scoping call → 2-hour pilot → 30-day cohort</div></div>
+    <div class="pillar-attr" style="border-bottom: none;"><div class="attr-lbl">Pricing model</div><div>Scoped per pilot. Enterprise L&amp;D or per-seat agreements.</div></div>
+  </div>
+</section>
+
+<!-- ==================== LAYOUT ==================== -->
+<section class="section cream" id="layout">
+  <div class="section-num">13 · Layout Primitives</div>
+  <h1>Grid · framing · <em>density.</em></h1>
+  <p class="lede">12-column grid. Generous gutters. Plus-corner frames on every section header. Tag-frame eyebrow pattern. Bold contrast between dark hero sections and cream body sections.</p>
+
+  <h2>Section rhythm</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Hero · Ink dark</strong> · marketing first impression. 3-line H1. Two CTAs. Stat trio.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Manifesto · Ink dark</strong> · full-bleed, centered, multi-color emphasis spans.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Pillar doors · cream</strong> · two color-coded cards · Indigo + Spring split.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Capability grid · cream</strong> · 8 icons (4 Builders + 4 Consumers) · plus-corner cards.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Pain quote cards · cream</strong> · 6 personas · Coral quote marks · representative scenarios disclaimer.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Success story · paper</strong> · 2 anonymized cards · pillar-color emphasis on outcome metric.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Stats · Sun bleed or Ink dark</strong> · big numerals · count-up on scroll.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Curriculum philosophy · Indigo bleed</strong> · 5 principle cards · "full roadmap in masterclass" gate.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Mentor strip · cream</strong> · pillar-tab switcher · 3 cards per pillar.</li>
+    <li style="padding: 10px 0;"><strong>Final CTA · Ink dark</strong> · dual CTA · masterclass + scoping call.</li>
+  </ul>
+</section>
+
+
+<!-- ==================== SURFACE MATERIAL · LIQUID GLASS ==================== -->
+<section class="section" id="material">
+  <div class="section-num">14 · Surface Material · Liquid Glass</div>
+  <h1>One material. <em>Liquid glass.</em></h1>
+  <div class="callout indigo">
+    <strong>The signature surface for the site.</strong> Floating chrome — the nav, cohort cards over photography, the masterclass modal, the pricing rail — is rendered as translucent, blurred "liquid glass": it refracts the vibrant colour behind it instead of covering it. Content on a plain page stays flat and opaque. Glass is chrome, never a reading surface.
+  </div>
+  <p class="lede">Real backdrop blur plus saturation lifts the Indigo/Spring/Sun palette straight through the panel, so the brand's colour is always alive at the edges. A thin top-lit border and a soft specular sheen sell the glass; a hairline shadow floats it off the page.</p>
+
+  <h2>Live material</h2>
+  <div style="position:relative; border-radius:16px; overflow:hidden; margin:18px 0; padding:56px 32px; background:
+      radial-gradient(520px 340px at 12% 18%, #5B47FF 0%, transparent 60%),
+      radial-gradient(480px 320px at 88% 30%, #9EE89C 0%, transparent 58%),
+      radial-gradient(460px 380px at 60% 92%, #FFD23F 0%, transparent 55%),
+      radial-gradient(420px 300px at 25% 85%, #FF6B47 0%, transparent 55%),
+      #0E0E14;">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-radius:14px;
+        background:rgba(255,255,255,.14); backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%);
+        border:1px solid rgba(255,255,255,.28); box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 12px 40px rgba(14,14,20,.28);">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg viewBox="0 0 48 48" width="26" height="26"><path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#fff"/><path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#fff"/><rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#fff"/><rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#fff"/></svg>
+        <span style="font-family:var(--display); font-weight:800; font-size:16px; color:#fff; letter-spacing:-.3px;">Tayana</span>
+      </div>
+      <div style="display:flex; gap:22px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.9);">
+        <span>Pillars</span><span>Courses</span><span>Outcomes</span>
+      </div>
+      <span style="font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#0E0E14; background:#fff; padding:8px 14px; border-radius:100px;">Register free</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px;">
+      <div style="padding:24px; border-radius:14px; background:rgba(255,255,255,.16); backdrop-filter:blur(24px) saturate(180%); -webkit-backdrop-filter:blur(24px) saturate(180%); border:1px solid rgba(255,255,255,.3); box-shadow:0 1px 0 rgba(255,255,255,.45) inset, 0 12px 40px rgba(14,14,20,.28);">
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.82);">Cohort 09 · Builders</div>
+        <div style="font-family:var(--display); font-weight:800; font-size:22px; color:#fff; margin-top:10px; letter-spacing:-.4px;">AI Engineer</div>
+        <div style="font-family:var(--mono); font-size:12px; color:rgba(255,255,255,.78); margin-top:8px;">Spring 2026 · 24 seats</div>
+      </div>
+      <div style="padding:24px; border-radius:14px; background:rgba(255,255,255,.16); backdrop-filter:blur(24px) saturate(180%); -webkit-backdrop-filter:blur(24px) saturate(180%); border:1px solid rgba(255,255,255,.3); box-shadow:0 1px 0 rgba(255,255,255,.45) inset, 0 12px 40px rgba(14,14,20,.28);">
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.82);">Cohort 09 · Consumers</div>
+        <div style="font-family:var(--display); font-weight:800; font-size:22px; color:#fff; margin-top:10px; letter-spacing:-.4px;">AI for Marketing</div>
+        <div style="font-family:var(--mono); font-size:12px; color:rgba(255,255,255,.78); margin-top:8px;">Spring 2026 · 20 seats</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>The recipe</h2>
+  <div style="background: var(--ink); color: var(--body-light); padding: 24px; border-radius: 12px; font-family: var(--mono); font-size: 13px; line-height: 1.9; margin-top: 18px;">
+    .glass {<br>
+    &nbsp;&nbsp;background: rgba(255,255,255, .14);&nbsp;&nbsp;/* light mode: white veil */<br>
+    &nbsp;&nbsp;backdrop-filter: blur(20px) saturate(180%);<br>
+    &nbsp;&nbsp;-webkit-backdrop-filter: blur(20px) saturate(180%);<br>
+    &nbsp;&nbsp;border: 1px solid rgba(255,255,255, .28);&nbsp;&nbsp;/* top-lit edge */<br>
+    &nbsp;&nbsp;box-shadow: inset 0 1px 0 rgba(255,255,255,.45),&nbsp;/* specular sheen */<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 12px 40px rgba(14,14,20,.24);&nbsp;/* float */<br>
+    &nbsp;&nbsp;border-radius: 14px;<br>
+    }
+  </div>
+  <p style="margin-top:14px;">Tokens: <strong>blur</strong> 20px chrome / 24px cards / 30px modals · <strong>saturate</strong> 180% · <strong>veil</strong> white 12–18% on colour, Ink 40–55% when glass sits over light content · <strong>edge</strong> 1px white 28% · <strong>sheen</strong> inset 1px white 45% · <strong>float</strong> shadow 0 12px 40px Ink/24%. Always ship a solid fallback colour for browsers without <span style="font-family:var(--mono);font-size:13px;">backdrop-filter</span>.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px;">
+    <div class="callout spring"><strong>Do.</strong> Use glass for floating chrome over colour or photography — nav, modals, cohort cards, the sticky enroll rail, toasts. Keep text on glass white or Ink at ≥AA. One glass layer at a time.</div>
+    <div class="callout coral"><strong>Don't.</strong> Never stack glass on glass, never set long-form reading (LMS body, articles) on glass, never blur behind text a user is actively reading, and never drop the material below 4.5:1 contrast. No coloured tint in the glass itself — colour comes from behind it.</div>
+  </div>
+</section>
+
+<!-- ==================== COMPONENTS ==================== -->
+<section class="section" id="components">
+  <div class="section-num">15 · Component Library</div>
+  <h1>Buttons · chips · <em>cards.</em></h1>
+
+  <h2>Buttons</h2>
+  <div class="comp-row">
+    <div class="comp-label">Primary CTA · Indigo</div>
+    <div><a class="btn btn-primary">Register for masterclass →</a></div>
+    <div class="comp-label">Secondary · Ink</div>
+    <div><a class="btn btn-secondary">Book a scoping call →</a></div>
+    <div class="comp-label">Outline · Ink</div>
+    <div><a class="btn btn-outline">Talk to L&amp;D →</a></div>
+    <div class="comp-label">Success · Spring</div>
+    <div><a class="btn btn-success">Apply now →</a></div>
+    <div class="comp-label">Moments · Coral</div>
+    <div><a class="btn btn-coral">Watch demo →</a></div>
+    <div class="comp-label">Attention · Sun</div>
+    <div><a class="btn btn-sun">View cohort calendar →</a></div>
+  </div>
+
+  <h2>Eyebrow chips</h2>
+  <div class="comp-row">
+    <div><span class="tag">Eyebrow · Indigo (default)</span></div>
+    <div><span class="tag spring">Eyebrow · Spring</span></div>
+    <div><span class="tag sun">Eyebrow · Sun</span></div>
+    <div><span class="tag coral">Eyebrow · Coral</span></div>
+    <div><span class="tag dark">Eyebrow · Dark sections</span></div>
+  </div>
+
+  <h2>Plus-corner section frame</h2>
+  <div class="frame" style="background: var(--paper); margin-top: 18px;">
+    <span class="cb-bl"></span><span class="cb-br"></span>
+    <p style="margin: 0; font-family: var(--mono); font-size: 13px;">Plus-corner frames anchor every major section header. Indigo corners on light sections. Spring on Consumers contexts. Sun on attention moments.</p>
+  </div>
+</section>
+
+<!-- ==================== APPLICATIONS ==================== -->
+<section class="section cream" id="applications">
+  <div class="section-num">16 · Application Templates</div>
+  <h1>Social · slide · <em>email.</em></h1>
+  <p class="lede">Three high-frequency brand applications. Same brand mechanics, surface-appropriate density.</p>
+
+  <div class="app-grid">
+    <div class="app-card app-social">
+      <div>
+        <div class="ap-tag" style="color: var(--spring);">LinkedIn · 1080×1080</div>
+        <h3>Builders Cohort 09<br>opens registration.</h3>
+        <div class="body">June 1, 2026 · 6 weeks live + Orion · 15 of 24 seats confirmed.</div>
+      </div>
+      <div><span class="cta-mini">Register →</span></div>
+    </div>
+    <div class="app-card app-slide">
+      <div>
+        <div class="ap-tag" style="color: var(--indigo);">Slide · 16:9</div>
+        <h3>Two pillars.<br><span style="color: var(--indigo); font-style: italic; font-family: var(--serif); font-weight: 400;">One academy.</span></h3>
+        <div class="body" style="color: var(--muted);">Builders engineer AI careers. Consumers apply AI to the role they already have. 24 cohorts a year.</div>
+      </div>
+      <div><span class="cta-mini">Tayana Academy · 2026</span></div>
+    </div>
+    <div class="app-card app-email">
+      <div>
+        <div class="ap-tag" style="color: var(--indigo);">Email · 600 wide</div>
+        <h3>Your masterclass<br>registration is in.</h3>
+        <div class="body" style="color: var(--muted);">June 5, 7 PM IST. Calendar invite attached. The week-by-week curriculum is revealed in this session.</div>
+      </div>
+      <div><span class="cta-mini">Open calendar →</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PHOTOGRAPHY ==================== -->
+<section class="section" id="photography">
+  <div class="section-num">17 · Photography</div>
+  <h1>Real <em>learners.</em> Real outcomes.</h1>
+  <p class="lede">No stock people. No abstract AI substrate art. No mountains. Photography is real learners, real cohort sessions, real mentor demos, real before/after of shipped projects.</p>
+
+  <h2>Direction</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 12px 0; border-bottom: 1px solid var(--muted-line);"><strong>Real learners in their actual contexts</strong> — at the desk, on the Orion call, presenting a project. Wide warm light. No studio gloss.</li>
+    <li style="padding: 12px 0; border-bottom: 1px solid var(--muted-line);"><strong>Cohort sessions photographed in action</strong> — laptops open, sticky notes on the wall, mentor at the whiteboard.</li>
+    <li style="padding: 12px 0; border-bottom: 1px solid var(--muted-line);"><strong>Before/after of shipped work</strong> — screenshot of the broken process + screenshot of the agent that fixed it. The transformation IS the photography.</li>
+    <li style="padding: 12px 0; border-bottom: 1px solid var(--muted-line);"><strong>Mentor demos</strong> — close-up on the screen + ambient mentor in soft focus.</li>
+    <li style="padding: 12px 0;"><strong>Pillar color overlays at low opacity</strong> — Indigo gradient on Builders shots, Spring on Consumers shots. Brand cohesion without lazy filters.</li>
+  </ul>
+
+  <div class="callout coral">
+    <strong>Forbidden:</strong> stock photos of "diverse young professionals smiling at laptops" · AI-generated learner photos · abstract circuit board / mountain / network diagrams · anyone wearing a hoodie in a parking garage · women looking at men's screens.
+  </div>
+</section>
+
+<!-- ==================== MOOD ==================== -->
+<section class="section cream" id="mood">
+  <div class="section-num">18 · Mood Boards</div>
+  <h1>Reference brands. <em>What we feel like.</em></h1>
+  <p class="lede">Three brands whose visual register Tayana v4 leans into. Each represents a different facet of the Magician × open archetype combination.</p>
+
+  <div class="mood-grid">
+    <div class="mood-card">
+      <div class="mood-tag">Reference 01 · The vibrant academy</div>
+      <h4>Designlab</h4>
+      <p>Multi-color energetic palette without bootcamp drift. Outcome-led copy. Real student outcomes featured prominently. Premium feel without academic stiffness. The template Tayana v4 closest mirrors.</p>
+    </div>
+    <div class="mood-card">
+      <div class="mood-tag">Reference 02 · The institutional energy</div>
+      <h4>Linear</h4>
+      <p>Dark Ink canvas + electric accent (Linear uses purple). Mono labels and metadata. Serious about the craft. Tayana lifts the canvas + accent + Mono pattern, not the type set.</p>
+    </div>
+    <div class="mood-card">
+      <div class="mood-tag">Reference 03 · The warm transformation</div>
+      <h4>Notion</h4>
+      <p>Warm off-white canvas. Playful multi-color in UI moments. Serious institutional credibility underneath. The Orion LMS reading surface lives in this register.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>What we are NOT:</strong> Not 100xEngineers (Builder archetype maxed · loses Consumers). Not Coding Ninjas (bootcamp-marketing register). Not Harvard SEAS (Sage maxed · loses candidate energy). Not Aesop / Hermès (boutique editorial · the v3.2 trap we are leaving).
+  </div>
+</section>
+
+<!-- ==================== ICONOGRAPHY ==================== -->
+<section class="section" id="icons">
+  <div class="section-num">19 · Iconography</div>
+  <h1>Geometric. Two-weight. <em>Pillar-colored.</em></h1>
+  <p class="lede">Single line-weight icon system. 24×24 grid. 2px stroke. Round caps. Indigo on Builders icons. Spring on Consumers icons. Ink on neutral system icons.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; margin-top: 18px;">
+    <!-- Placeholder grid · designer fills with real SVG glyphs -->
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L2 22 L22 22 Z"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">Agents</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10 H21"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">LLM Apps</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">RAG</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 H20 M4 12 H20 M4 18 H20"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">APIs</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 L9 17 L20 6"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">Workflow</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 L9 11 L13 15 L21 7"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">Insight</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6 V12 C 4 17 8 21 12 22 C 16 21 20 17 20 12 V6 Z"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">Governance</div></div>
+    <div class="frame" style="background: var(--paper); padding: 18px; text-align: center;"><span class="cb-bl"></span><span class="cb-br"></span><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="13" rx="1"/><path d="M9 8 V5 a3 3 0 0 1 6 0 V8"/></svg><div style="font-family: var(--mono); font-size: 9px; margin-top: 8px; color: var(--muted);">Privacy</div></div>
+  </div>
+
+  <div class="callout" style="margin-top: 20px;">
+    <strong>Designer note:</strong> Above is a starter set. Final 32-icon library to be commissioned. Style: geometric · 2px stroke · round caps · 24×24 grid · single-color (pillar-themed) · no gradients · no fills except in solid-glyph hover state.
+  </div>
+</section>
+
+<!-- ==================== MOTION ==================== -->
+<section class="section cream" id="motion">
+  <div class="section-num">20 · Motion Principles</div>
+  <h1>Transformation, <em>not decoration.</em></h1>
+  <p class="lede">Magician archetype motion: before-after, scroll-driven storytelling, reveal-on-intersect. Every animation earns its presence by showing a state change — not by moving for sake of moving.</p>
+
+  <h2>Timing curves</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong style="font-family: var(--mono); color: var(--indigo);">180ms · cubic-bezier(.4, 0, .2, 1)</strong> — hover states, button presses, link transitions.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong style="font-family: var(--mono); color: var(--indigo);">320ms · cubic-bezier(.2, .7, .2, 1)</strong> — section reveals, accordion opens, card lifts.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong style="font-family: var(--mono); color: var(--indigo);">520ms · cubic-bezier(.16, 1, .3, 1)</strong> — page transitions, hero load-in, count-up animations.</li>
+    <li style="padding: 10px 0;"><strong style="font-family: var(--mono); color: var(--indigo);">800ms · linear-ish</strong> — marquees, infinite tickers, cohort calendar reveals.</li>
+  </ul>
+
+  <h2>Approved motion patterns</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Scroll-reveal stagger</strong> · IntersectionObserver → opacity 0→1, translateY 12px → 0, 320ms, 50ms stagger between siblings.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Count-up</strong> · stat band numerals animate 0 → value on scroll-into-view, 520ms ease-out cubic.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Marquee · horizontal infinite</strong> · linear, pause on hover for testimonial ticker.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Hero gradient drift</strong> · slow radial-gradient parallax behind hero text (Indigo + Spring blobs · 60s loop · low intensity).</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Before/after slider</strong> · drag a vertical handle to reveal "before AI workflow" vs "after AI workflow" screenshots in success story sections.</li>
+    <li style="padding: 10px 0;"><strong>FAQ accordion</strong> · max-height transition, 320ms, line-cross icon rotation.</li>
+  </ul>
+
+  <div class="callout coral">
+    <strong>Forbidden:</strong> spinning logos · text bouncing on entrance · parallax that distracts from reading · ANY animation in the LMS body reading region · motion behind text the user is trying to read.
+  </div>
+</section>
+
+<!-- ==================== COMM ==================== -->
+<section class="section" id="comm">
+  <div class="section-num">21 · Communication Layers</div>
+  <h1>Audience · industry · geography · <em>cohort.</em></h1>
+  <p class="lede">L3 through L6 are presentation-only layers. They flex within the brand to communicate context — they don't get their own brand identity. Indigo on Builders. Spring on Consumers. The rest is content.</p>
+  <table class="essence">
+    <tr><td>L3 · Audience</td><td>Builders read (project-led) vs Consumers read (workflow-led). Voice + photography flex per audience.</td></tr>
+    <tr><td>L4 · Industry</td><td>BFSI · ops · HR · marketing · healthcare for Consumers. Cohort theme for Builders (Distributed Systems, Career Switchers, etc.).</td></tr>
+    <tr><td>L5 · Geography</td><td>India · United States · Canada. Same brand. Local proof points · local masterclass times · local mentor cohort.</td></tr>
+    <tr><td>L6 · Cohort</td><td>Cohort 09, Cohort 10, etc. Date-bound. Same brand mechanics. Cohort number is the only seasonal variable.</td></tr>
+  </table>
+</section>
+
+<!-- ==================== SUBBRAND ==================== -->
+<section class="section cream" id="subbrand">
+  <div class="section-num">22 · Sub-brand Rules</div>
+  <h1>One brand. <em>No sub-brands.</em></h1>
+  <p class="lede">Tayana Academy is one brand. Builders and Consumers are pillars, not sub-brands. Cohort themes (Distributed Systems, Financial Operations) are presentation, not brand. Orion (LMS) and Nebula (CRM) are internal product names, not customer-facing brands.</p>
+
+  <h2>Rules</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>No "Tayana Academy Pro / Premium / Plus."</strong> Cohort access is uniform per pillar.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>No "Tayana Academy India / US / UK"</strong> as visible brand variants. Geography is a content layer · same logo · same palette.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Pillar names always read</strong> as "Tayana Academy · Builders" / "Tayana Academy · Consumers" — never standalone.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line);"><strong>Cohort badges</strong> are content chips, not brand marks. Format: "Cohort 09 · Builders · Spring 2026."</li>
+    <li style="padding: 10px 0;"><strong>Partnership co-brands</strong> (e.g., curriculum aligned with OpenAI) are content credits, not sub-brands. Never lock-up a partner logo with the Tayana mark.</li>
+  </ul>
+</section>
+
+<!-- ==================== ASSETS ==================== -->
+<section class="section" id="assets">
+  <div class="section-num">23 · Production Assets</div>
+  <h1>File formats · naming · <em>folder structure.</em></h1>
+  <p class="lede">Designer / dev handover spec. Every asset format and naming convention production needs.</p>
+
+  <h2>File formats</h2>
+  <table class="wcag">
+    <thead><tr><th>Asset</th><th>Primary format</th><th>Variants</th><th>Color space</th></tr></thead>
+    <tbody>
+      <tr><td>Wordmark · web</td><td>SVG</td><td>Responsive single file</td><td>sRGB</td></tr>
+      <tr><td>Wordmark · print</td><td>EPS + PDF</td><td>Vector · scalable</td><td>CMYK + spot</td></tr>
+      <tr><td>Logo mark (when locked)</td><td>SVG</td><td>Full color · mono ink · mono indigo · mono white</td><td>sRGB + CMYK</td></tr>
+      <tr><td>Favicon</td><td>ICO + PNG</td><td>16, 32, 48, 192, 512 sizes</td><td>sRGB</td></tr>
+      <tr><td>Social avatar</td><td>PNG · 1024×1024</td><td>Circle-safe (centered mark)</td><td>sRGB</td></tr>
+      <tr><td>Email signature</td><td>PNG · 144 height</td><td>Optimized under 30 KB</td><td>sRGB</td></tr>
+      <tr><td>Photography</td><td>JPG (compressed)</td><td>Source · 16:9 · 4:5 · 1:1</td><td>sRGB</td></tr>
+      <tr><td>Icons</td><td>SVG</td><td>24×24 native · 2px stroke</td><td>currentColor</td></tr>
+      <tr><td>Certificate</td><td>PDF (print-ready)</td><td>Landscape · A4 + Letter</td><td>CMYK</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Naming convention</h2>
+  <ul style="list-style: none; padding: 0; margin-top: 18px;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line); font-family: var(--mono); font-size: 13px;"><strong>Pattern:</strong> tayana-[asset]-[variant]-[size].[ext]</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line); font-family: var(--mono); font-size: 13px;">tayana-wordmark-primary.svg</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line); font-family: var(--mono); font-size: 13px;">tayana-wordmark-mono-ink.svg</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line); font-family: var(--mono); font-size: 13px;">tayana-favicon-32.png</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--muted-line); font-family: var(--mono); font-size: 13px;">tayana-social-avatar-1024.png</li>
+    <li style="padding: 10px 0; font-family: var(--mono); font-size: 13px;">tayana-icon-agents-24.svg</li>
+  </ul>
+
+  <h2>Folder structure</h2>
+  <div style="background: var(--ink); color: var(--body-light); padding: 24px; border-radius: 12px; font-family: var(--mono); font-size: 13px; line-height: 1.85; margin-top: 18px;">
+    /brand/<br>
+    &nbsp;&nbsp;/logo/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — all approved marks · 6 variants when locked<br>
+    &nbsp;&nbsp;/wordmark/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — interim type-only mark<br>
+    &nbsp;&nbsp;/icons/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — 32-icon library (when commissioned)<br>
+    &nbsp;&nbsp;/fonts/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — Inter · JetBrains Mono · Instrument Serif (web + desktop)<br>
+    &nbsp;&nbsp;/photography/&nbsp;&nbsp;&nbsp;&nbsp; — approved learner + cohort shots<br>
+    &nbsp;&nbsp;/templates/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — Figma + Sketch + Canva starter files<br>
+    &nbsp;&nbsp;/certificate/&nbsp;&nbsp;&nbsp;&nbsp; — print + screen versions<br>
+    &nbsp;&nbsp;/brand-book.pdf&nbsp;&nbsp; — this document (export from HTML)
+  </div>
+</section>
+
+<!-- ==================== FORBIDDEN ==================== -->
+<section class="section dark" id="forbidden">
+  <div class="section-num">24 · Forbidden Patterns</div>
+  <h1>Things that <em>break</em> the brand.</h1>
+  <p class="lede">Hard rules. No exceptions without brand-owner amendment.</p>
+
+  <h2>Logo</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never add "AI" to the master mark · ever.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never combine the wordmark with another brand's logo in a single lock-up.</li>
+    <li style="padding: 10px 0;">Never apply gradient, drop shadow, 3D, or beveled effects to the mark.</li>
+  </ul>
+
+  <h2>Color</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use saturated bright accent as long-form background. Vibrant lives in moments, not surfaces.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use Indigo and Spring directly adjacent in UI (vibrates · always separate with neutral or Ink).</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use Sun on white as text (fails AA).</li>
+    <li style="padding: 10px 0;">Never use pillar accents as body text on white. Pillar accents are UI moments.</li>
+  </ul>
+
+  <h2>Type</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use Instrument Serif in body copy. Display H1/H2 emphasis spans only.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use exclamation marks in marketing copy. Energy is in precision.</li>
+    <li style="padding: 10px 0;">Never use ALL CAPS on H1/H2. Capitalize. Uppercase is for labels (Mono) only.</li>
+  </ul>
+
+  <h2>Tone</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never promise "transformation." Promise outcomes.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use the word "bootcamp."</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never use "limited seats" scarcity manufactured urgency. Cadence is the urgency.</li>
+    <li style="padding: 10px 0;">Never fabricate quotes from real public figures (Sam Altman, Sundar Pichai, etc.). Verified public quotes with citation only.</li>
+  </ul>
+
+  <h2>Architecture</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never create a "Tayana Academy Pro / Premium" sub-brand. One brand.</li>
+    <li style="padding: 10px 0; border-bottom: 1px solid var(--ink-border);">Never let pillar cohorts share visual identity (Builders = Indigo · Consumers = Spring · pillar-exclusive).</li>
+    <li style="padding: 10px 0;">Never reference parent businesses or holding entities on customer-facing surfaces.</li>
+  </ul>
+
+  <div class="callout">
+    <strong>If a brief asks for something on this list, escalate to brand owner before producing.</strong> This book is canonical. No exceptions without brand-owner amendment and version bump.
+  </div>
+</section>
+
+<footer>
+  <div class="indigo-bar"></div>
+  <div>Tayana Academy · Brand Book v5 · Vibrant Magician · 2026-06-04</div>
+  <div>Direction A locked · Logo locked · Light mode · Vishal × Team</div>
+</footer>
+
+</main>
+
+</div>
+
+</body>
+</html>

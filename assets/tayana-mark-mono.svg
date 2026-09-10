@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Tayana Academy">
+  <title>Tayana Academy — monochrome ink</title>
+  <path d="M24 6.5 L43.5 15.5 L24 24.5 L4.5 15.5 Z" fill="#0E0E14"></path>
+  <circle cx="24" cy="15.5" r="1.8" fill="#FFFEFA"></circle>
+  <path d="M13.5 20 V27 C13.5 31.4 34.5 31.4 34.5 27 V20" fill="none" stroke="#0E0E14" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"></path>
+  <path d="M43.5 15.5 V25.5" stroke="#0E0E14" stroke-width="2" stroke-linecap="round"></path>
+  <circle cx="43.5" cy="27.6" r="2.1" fill="#0E0E14"></circle>
+  <rect x="12" y="35.5" width="6.4" height="8" rx="1.8" fill="#0E0E14"></rect>
+  <rect x="20.8" y="30.5" width="6.4" height="13" rx="1.8" fill="#0E0E14"></rect>
+  <rect x="29.6" y="35.5" width="6.4" height="8" rx="1.8" fill="#0E0E14"></rect>
+</svg>

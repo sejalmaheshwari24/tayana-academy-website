@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q&amp;A Chatbot on private data — Project · Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="A cohort project: a context-aware Q&A assistant grounded in private data with retrieval, vector search and citations. Build it in the AI Engineer track.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Q&amp;amp;A Chatbot on private data — Project · Tayana Academy">
+  <meta property="og:description" content="A cohort project: a context-aware Q&amp;A assistant grounded in private data with retrieval, vector search and citations. Build it in the AI Engineer track.">
+  <meta property="og:url" content="https://tayanaacademy.com/project-qa-chatbot.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Q&amp;amp;A Chatbot on private data — Project · Tayana Academy">
+  <meta name="twitter:description" content="A cohort project: a context-aware Q&amp;A assistant grounded in private data with retrieval, vector search and citations. Build it in the AI Engineer track.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .crumb { display:flex; align-items:center; gap:8px; font:500 12px/1 var(--mono); color:var(--steel); padding-top:118px; }
+  .crumb a:hover { color:var(--copper); } .crumb .sep { color:var(--ash-border); }
+  .pd-hero { padding:26px 0 8px; }
+  .pd-name { font:900 clamp(2.4rem,5vw,4rem)/1.02 var(--display); letter-spacing:-.035em; color:var(--iron); text-transform:none; margin:14px 0 16px; max-width:18ch; }
+  .pd-name .em { font-family:var(--serif); font-style:italic; font-weight:400; color:var(--copper); }
+  .pd-lede { font:400 18px/1.6 var(--sans); color:var(--steel); max-width:60ch; }
+  .pd-visual { aspect-ratio:21/9; border-radius:var(--r-card); background:linear-gradient(135deg,#3A3C42,#23252a); margin-top:28px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-card); }
+  .pd-visual .demo { width:78%; background:var(--iron-lift); border:1px solid var(--iron-border); border-radius:var(--r-md); padding:18px; }
+  .pd-bubble { border-radius:var(--r-sm); padding:11px 14px; margin-bottom:10px; font: 400 14px/1.45 var(--sans); max-width:74%; }
+  .pd-bubble.q { background:var(--copper); color:#fff; margin-left:auto; }
+  .pd-bubble.a { background:#34363B; color:var(--sand); }
+  .pd-bubble.a .cite { display:block; margin-top:6px; font:500 11px/1.3 var(--mono); color:var(--copper-light); }
+  .stack-chips { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+  .stack-chip { font:600 12px/1 var(--mono); letter-spacing:.04em; color:var(--copper-deep); background:var(--copper-soft); padding:9px 14px; border-radius:var(--r-pill); }
+  .steps { counter-reset:step; max-width:760px; margin-top:34px; }
+  .step { display:grid; grid-template-columns:48px 1fr; gap:20px; padding:22px 0; border-bottom:1px solid var(--ash-border); }
+  .step:last-child { border-bottom:none; }
+  .step .num { counter-increment:step; width:42px; height:42px; border-radius:var(--r-sm); background:var(--iron); color:#fff; display:flex; align-items:center; justify-content:center; font:800 16px/1 var(--display); }
+  .step .num::before { content:counter(step,decimal-leading-zero); }
+  .step .t { font:800 19px/1.2 var(--display); color:var(--iron); letter-spacing:-.02em; margin-bottom:5px; }
+  .step .d { font:400 15px/1.6 var(--sans); color:var(--steel); }
+  .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .skill { display:flex; gap:11px; align-items:center; background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-md); padding:16px 18px; font:600 14px/1.3 var(--sans); color:var(--iron); }
+  .skill svg { width:18px; height:18px; color:var(--copper); flex-shrink:0; }
+  @media(max-width:820px){ .skills-grid{grid-template-columns:1fr} .step{grid-template-columns:1fr;gap:8px} }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects" style="color:var(--copper)">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="outcomes.html">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="pricing.html">Pricing</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="track-ai-engineer.html" class="btn btn-primary" style="padding:11px 22px">Build this</a></div>
+</div></div></nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="catalog.html">Projects</a><span class="sep">·</span><a href="pillars.html">Builders</a><span class="sep">·</span><span style="color:var(--iron)">Q&amp;A Chatbot</span></div>
+  <div class="pd-hero">
+    <div class="tag-frame copper"><span class="cb-tl"></span><span class="cb-tr"></span><span class="cb-bl"></span><span class="cb-br"></span><span class="tag">▲ Builders project · Cohort 5</span></div>
+    <h1 class="pd-name">A Q&amp;A chatbot on <span class="em">your own data.</span></h1>
+    <p class="pd-lede">A context-aware assistant that answers questions grounded in private documents — retrieval, chunking, vector search and citations you can trust. One of the portfolio projects Builders ship in the AI Engineer track.</p>
+    <div class="pd-visual">
+      <div class="demo">
+        <div class="pd-bubble q">What's our refund window for enterprise plans?</div>
+        <div class="pd-bubble a">Enterprise refunds are handled within 30 days of invoice, per the MSA.<span class="cite">⌖ cited: MSA.pdf · §7.2 Refunds</span></div>
+        <div class="pd-bubble q">And for monthly seats?</div>
+        <div class="pd-bubble a">Monthly seats are non-refundable but cancel anytime before the next cycle.<span class="cite">⌖ cited: Billing-Policy.md · Cancellations</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="proof-grid" style="align-items:start">
+      <div>
+        <p class="eyebrow" style="text-align:left">What it does</p>
+        <h2 class="section-q" style="text-align:left;max-width:15ch">Answers, <span class="em">with receipts.</span></h2>
+        <p class="section-lede" style="text-align:left;margin-left:0">Point it at a corpus — docs, wikis, policies — and it answers in natural language with a citation to the exact source passage. No hallucinated facts, no unsourced claims. The same pattern behind production support assistants and internal knowledge tools.</p>
+        <div class="stack-chips">
+          <span class="stack-chip">Retrieval</span><span class="stack-chip">Embeddings</span><span class="stack-chip">Vector search</span><span class="stack-chip">Chunking</span><span class="stack-chip">Citations</span><span class="stack-chip">LLM orchestration</span>
+        </div>
+      </div>
+      <div class="proof-artifact reveal">
+        <span class="pa-corner pa-tl"></span><span class="pa-corner pa-tr"></span><span class="pa-corner pa-bl"></span><span class="pa-corner pa-br"></span>
+        <div class="pa-kind">Project spec</div>
+        <div class="pa-title">Q&amp;A Chatbot</div>
+        <div class="pa-name">on private data</div>
+        <div class="pa-divider"></div>
+        <div class="pa-row"><span>Pillar</span><b>Builders</b></div>
+        <div class="pa-row"><span>Difficulty</span><b>Intermediate</b></div>
+        <div class="pa-row"><span>Built in</span><b>Weeks 1–2</b></div>
+        <div class="pa-row"><span>Track</span><b>AI Engineer</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:left">How you build it</p>
+    <h2 class="section-q" style="text-align:left">Four steps, <span class="em">one shipped demo.</span></h2>
+    <div class="steps">
+      <div class="step"><span class="num"></span><div><div class="t">Ingest &amp; chunk the corpus</div><div class="d">Load your documents, split them into retrievable chunks, and choose an embedding model. Set up the vector store.</div></div></div>
+      <div class="step"><span class="num"></span><div><div class="t">Retrieve &amp; rank</div><div class="d">On each question, embed the query, pull the most relevant chunks, and rank them before they reach the model.</div></div></div>
+      <div class="step"><span class="num"></span><div><div class="t">Generate with citations</div><div class="d">Prompt the model to answer only from retrieved context, and attach a citation to the exact source passage.</div></div></div>
+      <div class="step"><span class="num"></span><div><div class="t">Evaluate &amp; harden</div><div class="d">Run an eval set for faithfulness and retrieval quality. Catch hallucinations before the demo ships.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Skills you practice</p>
+    <h2 class="section-q">The real <span class="em">muscle.</span></h2>
+    <div class="skills-grid reveal" style="margin-top:34px">
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Retrieval-augmented generation</div>
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Embeddings &amp; vector search</div>
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Prompt structure &amp; grounding</div>
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Citation &amp; source tracing</div>
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Faithfulness evals</div>
+      <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Latency &amp; cost basics</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="proof-grid" style="align-items:center">
+      <div>
+        <p class="eyebrow" style="text-align:left">Build it for real</p>
+        <h2 class="section-q" style="text-align:left;max-width:14ch">This ships in a <span class="em">cohort.</span></h2>
+        <p class="section-lede" style="text-align:left;margin-left:0">You build this project in weeks 1–2 of the AI Engineer track — under a working operator, against a real deadline, on your own data. It becomes the first piece in your portfolio.</p>
+        <div style="display:flex;gap:12px;margin-top:24px"><a href="track-ai-engineer.html" class="btn btn-primary">View the track</a><a href="#" class="btn btn-ghost" data-toast="Masterclass registration — we'll email your cohort date.">Register</a></div>
+      </div>
+      <div class="hscroll" id="hsRel" style="padding-left:0">
+        <article class="tcard" style="flex:0 0 70%"><div class="tcard-top"><div class="tcard-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M12 36V12l12 8 12-8v24" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg></div><div class="tcard-kind">Builders project</div><div class="tcard-name">Resume-screening agent</div><div class="tcard-desc">Parses, scores and shortlists candidates against a real brief.</div></div><div class="tcard-foot"><span class="lab">Portfolio piece</span><span class="val">Agent</span></div></article>
+        <article class="tcard" style="flex:0 0 70%"><div class="tcard-top"><div class="tcard-icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="8" stroke="currentColor" stroke-width="2"/><path d="M10 40c0-7 6-11 14-11s14 4 14 11" stroke="currentColor" stroke-width="2" fill="none"/></svg></div><div class="tcard-kind">Builders project</div><div class="tcard-name">Infra monitoring tool</div><div class="tcard-desc">Scripted alerts that flag anomalies, with eval gates.</div></div><div class="tcard-foot"><span class="lab">Portfolio piece</span><span class="val">Pipeline</span></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="catalog.html" style="color:var(--copper-light)">Career Tracks</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+</body>
+</html>

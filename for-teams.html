@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Teams — Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Train a team for the AI era. Scope a pilot with your L&D function — your people rebuild a real workflow with AI and prove the ROI before you scale.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="For Teams — Tayana Academy">
+  <meta property="og:description" content="Train a team for the AI era. Scope a pilot with your L&amp;D function — your people rebuild a real workflow with AI and prove the ROI before you scale.">
+  <meta property="og:url" content="https://tayanaacademy.com/for-teams.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="For Teams — Tayana Academy">
+  <meta name="twitter:description" content="Train a team for the AI era. Scope a pilot with your L&amp;D function — your people rebuild a real workflow with AI and prove the ROI before you scale.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .teams-hero { padding:128px 0 0; }
+  .teams-hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+  .th-h1 { font:900 clamp(2.6rem,5.4vw,4.6rem)/1.0 var(--display); letter-spacing:-.04em; color:var(--iron); text-transform:none; }
+  .th-h1 .em { font-family:var(--serif); font-style:italic; font-weight:400; color:var(--brass-deep); }
+  .th-sub { font:400 18px/1.62 var(--sans); color:var(--steel); max-width:48ch; margin-top:20px; }
+  .th-visual { aspect-ratio:1/1; border-radius:var(--r-card); background:linear-gradient(140deg,var(--brass),var(--brass-deep)); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-card); }
+  .th-visual .g { font:900 220px/1 var(--display); color:rgba(255,255,255,.16); }
+  .pilot-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .pilot-step { background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-card); padding:26px 22px; position:relative; }
+  .pilot-step .pn { font:800 13px/1 var(--mono); color:var(--brass-deep); letter-spacing:.08em; margin-bottom:14px; }
+  .pilot-step .pt { font:800 18px/1.15 var(--display); color:var(--iron); letter-spacing:-.02em; margin-bottom:7px; }
+  .pilot-step .pd { font:400 14px/1.55 var(--sans); color:var(--steel); }
+  .roi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .roi-card { background:var(--iron); border-radius:var(--r-card); padding:32px; color:var(--sand); }
+  .roi-card .rn { font:900 44px/1 var(--display); color:#fff; letter-spacing:-.04em; margin-bottom:8px; }
+  .roi-card .rn .u { color:var(--brass-light); }
+  .roi-card .rl { font:400 14px/1.5 var(--sans); color:var(--steel-light); }
+  .lead-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+  .lead-form { display:flex; flex-direction:column; gap:13px; }
+  .lf-row { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+  .lf-field label { display:block; font:600 12px/1 var(--sans); color:var(--iron); margin-bottom:6px; }
+  .lf-input, .lf-select, .lf-textarea { width:100%; font:400 14px/1.4 var(--sans); padding:13px 15px; background:var(--ash); border:1px solid var(--ash-border); border-radius:var(--r-sm); color:var(--iron); outline:none; transition:border-color var(--dur-micro),box-shadow var(--dur-micro); }
+  .lf-input:focus,.lf-select:focus,.lf-textarea:focus { border-color:var(--brass); box-shadow:0 0 0 3px var(--brass-soft); }
+  .lf-textarea { min-height:96px; resize:vertical; }
+  .lead-aside { background:var(--brass-soft); border:1px solid rgba(168,136,72,.3); border-radius:var(--r-card); padding:30px; }
+  .lead-aside .la-row { display:flex; gap:13px; align-items:flex-start; padding:16px 0; border-bottom:1px solid rgba(168,136,72,.25); }
+  .lead-aside .la-row:last-child { border-bottom:none; }
+  .lead-aside .la-ico { width:36px; height:36px; flex-shrink:0; border-radius:var(--r-sm); background:var(--paper); color:var(--brass-deep); display:flex; align-items:center; justify-content:center; }
+  .lead-aside .la-ico svg { width:18px; height:18px; }
+  .lead-aside .la-t { font:700 14px/1.3 var(--sans); color:var(--iron); margin-bottom:2px; }
+  .lead-aside .la-d { font: 400 14px/1.45 var(--sans); color:var(--steel); }
+  @media(max-width:880px){ .teams-hero-grid{grid-template-columns:1fr} .pilot-steps{grid-template-columns:1fr 1fr} .roi-grid{grid-template-columns:1fr} .lead-grid{grid-template-columns:1fr} }
+  @media(max-width:560px){ .pilot-steps{grid-template-columns:1fr} .lf-row{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="outcomes.html">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="for-teams.html" style="color:var(--brass-deep)">For Teams</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="#lead" class="btn btn-brass" style="padding:11px 22px">Book a scoping call</a></div>
+</div></div></nav>
+
+<header class="teams-hero">
+  <div class="bloom-field" aria-hidden="true"><span></span></div>
+  <div class="wrap">
+    <div class="teams-hero-grid">
+      <div>
+        <div class="tag-frame brass"><span class="cb-tl"></span><span class="cb-tr"></span><span class="cb-bl"></span><span class="cb-br"></span><span class="tag">◆ For Teams · Consumers pillar</span></div>
+        <h1 class="th-h1" style="margin-top:14px">AI capability, <span class="em">for your business.</span></h1>
+        <p class="th-sub">Scope a pilot with your L&amp;D function. Your people rebuild a real workflow with AI — inside the tools they already use — and prove the ROI before you scale it team-wide. Thirty days. No code required.</p>
+        <div style="display:flex;gap:12px;margin-top:28px"><a href="#lead" class="btn btn-brass btn-lg">Book a scoping call</a><a href="#pilot" class="btn btn-ghost btn-lg">See the pilot model</a></div>
+      </div>
+      <div class="th-visual"><span class="g">◆</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="section-tight" style="margin-top:40px">
+  <div class="wrap">
+    <p class="eyebrow">Platforms we build on · teams we've trained</p>
+    <div class="logos-wall reveal" style="margin-top:8px">
+      <div class="logo-cell">Infosys</div><div class="logo-cell">TCS</div><div class="logo-cell">Accenture</div><div class="logo-cell">Deloitte</div><div class="logo-cell">HDFC Bank</div><div class="logo-cell">Flipkart</div><div class="logo-cell">Razorpay</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pilot">
+  <div class="wrap">
+    <p class="eyebrow">The pilot model</p>
+    <h2 class="section-q">Prove it on one workflow, <span class="em">then scale.</span></h2>
+    <p class="section-lede">A pilot is scoped, short and measured — so you see the return before you commit the org.</p>
+    <div class="pilot-steps reveal" style="margin-top:40px">
+      <div class="pilot-step"><div class="pn">01 · SCOPE</div><div class="pt">Pick the workflow</div><div class="pd">We scope with your L&amp;D lead and pick one workflow your team runs every week, with a measurable baseline.</div></div>
+      <div class="pilot-step"><div class="pn">02 · BUILD</div><div class="pt">Your team rebuilds it</div><div class="pd">Over 30 days on Orion, your people rebuild that workflow with AI — guided by working operators.</div></div>
+      <div class="pilot-step"><div class="pn">03 · MEASURE</div><div class="pt">Prove the ROI</div><div class="pd">Measure against the baseline — hours saved, error rate, throughput. The numbers decide what's next.</div></div>
+      <div class="pilot-step"><div class="pn">04 · SCALE</div><div class="pt">Roll it out</div><div class="pd">An optional 2-hour team pilot locks in adoption, then you take it team-wide with a playbook.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">What teams measure</p>
+    <h2 class="section-q">Outcomes you can <span class="em">put in a deck.</span></h2>
+    <div class="roi-grid reveal" style="margin-top:40px">
+      <div class="roi-card"><div class="rn"><span data-count="45">0</span><span class="u"> → 12</span></div><div class="rl">minutes per task on a rebuilt finance workflow — a representative pilot result</div></div>
+      <div class="roi-card"><div class="rn"><span data-count="30">0</span><span class="u"> days</span></div><div class="rl">from kickoff to a workflow live in production, measured against baseline</div></div>
+      <div class="roi-card"><div class="rn"><span data-count="20">0</span><span class="u"> seats</span></div><div class="rl">max per cohort — small by design, so every person ships something real</div></div>
+    </div>
+    <p style="text-align:center;font:400 13px/1.5 var(--sans);color:var(--steel);margin-top:18px">Representative pilot outcomes, confirmed with the team before publishing. Your numbers are scoped to your workflow.</p>
+  </div>
+</section>
+
+<section class="section" id="lead">
+  <div class="wrap">
+    <p class="eyebrow">Start the conversation</p>
+    <h2 class="section-q">Unlock your team's <span class="em">AI potential.</span></h2>
+    <p class="section-lede">Tell us the workflow that costs you the most time. We'll assess your team's AI maturity on a scoping call and map the 30-day pilot.</p>
+    <div class="lead-grid" style="margin-top:44px">
+      <form data-form="team-pilot" data-success="Thanks — we'll reach out to scope your pilot." novalidate>
+        <div class="hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="lf-row">
+          <div class="lf-field"><label>First name</label><input name="first_name" class="lf-input" type="text" placeholder="Priya"></div>
+          <div class="lf-field"><label>Last name</label><input name="last_name" class="lf-input" type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="lf-field"><label>Work email</label><input name="email" class="lf-input" type="email" placeholder="you@company.com"></div>
+        <div class="lf-row">
+          <div class="lf-field"><label>Company</label><input name="company" class="lf-input" type="text" placeholder="Company name"></div>
+          <div class="lf-field"><label>Team size for the pilot</label>
+            <select name="team_size" class="lf-select"><option>5–10 people</option><option>11–20 people</option><option>21–50 people</option><option>50+ people</option></select>
+          </div>
+        </div>
+        <div class="lf-field"><label>Which workflow would you pilot?</label><textarea name="workflow" class="lf-textarea" placeholder="e.g. monthly close, lead triage, ticket routing…"></textarea></div>
+        <button type="submit" class="btn btn-brass btn-lg" style="justify-content:center;margin-top:4px" data-toast="Thanks — we'll reach out to scope your team pilot.">Book a scoping call <span aria-hidden="true">&#8594;</span></button>
+      </form>
+      <aside class="lead-aside">
+        <div class="la-row"><div class="la-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div><div class="la-t">30-day pilots</div><div class="la-d">Scoped to one workflow, measured against a real baseline.</div></div></div>
+        <div class="la-row"><div class="la-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M4 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div><div><div class="la-t">Working operators</div><div class="la-d">Your team is guided by people who ship AI for a living.</div></div></div>
+        <div class="la-row"><div class="la-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div><div class="la-t">Measured ROI</div><div class="la-d">Hours saved, error rate, throughput — reported back to L&amp;D.</div></div></div>
+        <div class="la-row"><div class="la-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="la-t">Atlanta-based</div><div class="la-d">AFC Towers · 3343 Peachtree Road · Atlanta, GA</div></div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="ascii-art" aria-hidden="true"><span>                         000000
+                    0000000000000000
+                000000000000000000000000
+           0000000000000000000000000000000000
+       00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000   000
+              0000000000000000000000000000       000
+              0000000000000000000000000000       000
+              0000     0000000000     0000       000
+              0000         00         0000       000
+              0000                    0000      0xxx0
+               00000000000000000000000000       0xxx0
+                000000000000000000000000         00
+                        00000000
+                        00000000
+               000000   00000000   000000
+              00000000  00000000  00000000
+              00000000  00000000  00000000
+              00000000  00000000  00000000
+              00000000  00000000  00000000</span></div>
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--brass-light)">Home</a> · <a href="pillars.html" style="color:var(--brass-light)">Pillars</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+  <script src="forms.js" defer></script>
+</body>
+</html>

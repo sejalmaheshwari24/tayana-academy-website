@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro-Code Agent Engineers — Builders track · Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Engineer multi-agent systems in code. Python, LangChain, CrewAI, LangGraph and MCP across six project-first weeks — deploy an agent system that handles a real business intent.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Pro-Code Agent Engineers — Builders track · Tayana Academy">
+  <meta property="og:description" content="Engineer multi-agent systems in code. Python, LangChain, CrewAI, LangGraph and MCP across six project-first weeks — deploy an agent system that handles a real business intent.">
+  <meta property="og:url" content="https://tayanaacademy.com/track-pro-code-agent-engineer.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pro-Code Agent Engineers — Builders track · Tayana Academy">
+  <meta name="twitter:description" content="Engineer multi-agent systems in code. Python, LangChain, CrewAI, LangGraph and MCP across six project-first weeks — deploy an agent system that handles a real business intent.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .crumb { display:flex; align-items:center; gap:8px; font:500 12px/1 var(--mono); color:var(--steel); padding-top:118px; }
+  .crumb a:hover { color:var(--copper); } .crumb .sep { color:var(--ash-border); }
+  .td-hero { display:grid; grid-template-columns:1.45fr .9fr; gap:40px; align-items:start; padding:26px 0 8px; }
+  .td-name { font:900 clamp(2.4rem,5vw,4rem)/1.02 var(--display); letter-spacing:-.035em; color:var(--iron); text-transform:none; margin:14px 0 16px; }
+  .td-name .em { font-family:var(--serif); font-style:italic; font-weight:400; color:var(--copper); }
+  .td-lede { font:400 18px/1.6 var(--sans); color:var(--steel); max-width:54ch; }
+  .td-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+  .td-chip { display:inline-flex; align-items:center; gap:7px; font:600 12px/1 var(--mono); letter-spacing:.04em; color:var(--iron); background:var(--paper); border:1px solid var(--ash-border); padding:9px 14px; border-radius:var(--r-pill); }
+  .td-chip .star { color:var(--copper); }
+  .enroll { background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-card); padding:26px; box-shadow:var(--shadow-card); position:sticky; top:96px; }
+  .enroll .er { display:flex; align-items:center; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--ash-border); font: 400 14px/1.3 var(--sans); color:var(--steel); }
+  .enroll .er:last-of-type { border-bottom:none; }
+  .enroll .er b { font:700 14px/1 var(--sans); color:var(--iron); }
+  .enroll .er .seats { color:var(--ember); }
+  .enroll .btn { width:100%; margin-top:18px; }
+  .ship-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .ship-item { display:flex; gap:13px; align-items:flex-start; background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-md); padding:20px; }
+  .ship-item .ico { width:38px; height:38px; flex-shrink:0; border-radius:var(--r-sm); background:var(--copper-soft); color:var(--copper-deep); display:flex; align-items:center; justify-content:center; }
+  .ship-item .ico svg { width:20px; height:20px; }
+  .ship-item .t { font:700 15px/1.3 var(--sans); color:var(--iron); margin-bottom:3px; }
+  .ship-item .d { font: 400 14px/1.5 var(--sans); color:var(--steel); }
+  @media(max-width:880px){ .td-hero{grid-template-columns:1fr} .enroll{position:static} .ship-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html" style="color:var(--copper)">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="outcomes.html">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="pricing.html">Pricing</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="#enroll" class="btn btn-primary" style="padding:11px 22px" data-toast="Masterclass registration — we'll email your cohort date.">Register free</a></div>
+</div></div></nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="catalog.html">Career Tracks</a><span class="sep">·</span><a href="pillars.html">Builders</a><span class="sep">·</span><span style="color:var(--iron)">Pro-Code Agent Engineers</span></div>
+  <div class="td-hero">
+    <div>
+      <div class="tag-frame copper"><span class="cb-tl"></span><span class="cb-tr"></span><span class="cb-bl"></span><span class="cb-br"></span><span class="tag">▲ Builders · 6-week track · Python required</span></div>
+      <h1 class="td-name">Pro-Code <span class="em">Agent Engineers</span></h1>
+      <p class="td-lede">Design intelligent agent systems in code. Six project-first weeks through LangChain, CrewAI, LangGraph and MCP — routing, recovery, evals and deployment. You leave with a multi-agent system handling a real business intent, in production.</p>
+      <div class="td-meta"><span class="td-chip"><span class="star">★</span> 4.9 · 180 reviews</span>
+        <span class="td-chip">6 weeks · live cohort</span>
+        <span class="td-chip">24 seats max</span>
+        <span class="td-chip">Python required</span></div>
+    </div>
+    <aside class="enroll" id="enroll">
+      <div class="er"><span>Next cohort</span><b>AI for Distributed Systems</b></div>
+      <div class="er"><span>Starts</span><b>Jun 1, 2026</b></div>
+      <div class="er"><span>Cadence</span><b>1st &amp; 15th monthly</b></div>
+      <div class="er"><span>Seats left</span><b class="seats">9 of 24</b></div>
+      <div class="er"><span>Outcome</span><b>Agent system deployed</b></div>
+      <a href="enroll.html?track=pro-code-agent" class="btn btn-primary">Reserve your seat &#8594;</a>
+      <a href="contact.html" class="btn btn-ghost" style="width:100%;margin-top:10px" data-toast="Masterclass registration — we'll email your cohort date.">Free masterclass first</a>
+      <a href="#" class="btn btn-ghost" style="width:100%;margin-top:10px" data-toast="We'll send the full week-by-week after the masterclass.">Get the syllabus</a>
+      <a href="assets/one-pagers/pro-code-agent-engineer.jpg" download class="btn btn-ghost" style="width:100%;margin-top:10px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg> Download the one-pager</a>
+    </aside>
+  </div>
+</div>
+
+<!-- ROLE:DEFINITION -->
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="role-triad">
+      <span class="rt-words">Job-ready. Engineering-focused. Enterprise-ready.</span>
+      <span class="role-entry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 4.5-3.4 8.6-8 9.5-4.6-.9-8-5-8-9.5v-5z"/><path d="M9 12l2 2 4-4"/></svg>Entry · Python Assessment / Python Foundation</span>
+    </div>
+    <p class="section-lede" style="text-align:left;margin-left:0">Pro-Code Agent Engineers are trained to design, develop and deploy production-ready AI agents and intelligent automation systems using modern AI frameworks and software engineering best practices. With expertise in Python, agent architectures, backend development and LLM orchestration, they build scalable AI solutions that integrate seamlessly into enterprise environments.</p>
+    <div class="road-grid" style="margin-top:38px;align-items:start">
+      <div>
+        <p class="eyebrow" style="text-align:left;margin-left:0">Core technical capabilities</p>
+        <ul class="cap-list" style="margin-top:16px">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Python Programming</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Object-Oriented Programming (OOP)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 9l3.5 6.5M16.5 9L13 15.5"/></svg>API Development &amp; Integration</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg>AI Agent Architecture</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg>Multi-Agent Systems</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 9l3.5 6.5M16.5 9L13 15.5"/></svg>Model Context Protocol (MCP)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>Tool Calling &amp; Function Execution</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg>LLM &amp; AI Integrations</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>Backend Development</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="text-align:left;margin-left:0">Technologies &amp; tools</p>
+        <div class="tool-wall">
+        <span class="tool-chip"><img src="assets/logos/python.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Python</span>
+        <span class="tool-chip"><img src="assets/logos/vscode.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">VS Code</span>
+        <span class="tool-chip"><img src="assets/logos/github.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Git &amp; GitHub</span>
+        <span class="tool-chip"><img src="assets/logos/langchain.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">LangChain</span>
+        <span class="tool-chip"><img src="assets/logos/crewai.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">CrewAI</span>
+        <span class="tool-chip"><img src="assets/logos/langgraph.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">LangGraph</span>
+        <span class="tool-chip"><img src="assets/logos/fastapi.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">FastAPI</span>
+        <span class="tool-chip"><img src="assets/logos/docker.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Docker</span>
+        <span class="tool-chip"><img src="assets/logos/postman.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Postman</span>
+        </div>
+        <p class="tool-note">They are trained to build, test, deploy and maintain production-grade AI applications using industry-standard development workflows and enterprise tooling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /ROLE:DEFINITION -->
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:left">What you'll ship</p>
+    <h2 class="section-q" style="text-align:left;max-width:16ch">Four pieces of <span class="em">proof.</span></h2>
+    <div class="ship-grid" style="margin-top:34px">
+      <div class="ship-item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></span><div><div class="t">A tool-calling agent</div><div class="d">An agent that handles a real intent with function calling and structured output.</div></div></div>
+      <div class="ship-item reveal r1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="16" r="3"/><path d="M10 8h4M9 10l6 4"/></svg></span><div><div class="t">A multi-agent system</div><div class="d">CrewAI and LangGraph orchestration — routing, recovery and state.</div></div></div>
+      <div class="ship-item reveal r2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg></span><div><div class="t">An MCP integration</div><div class="d">Agents that reach into real systems through Model Context Protocol servers.</div></div></div>
+      <div class="ship-item reveal r3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg></span><div><div class="t">An eval suite</div><div class="d">Guardrails, regression gates and observability before anything ships.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYLLABUS -->
+<section class="section" id="curriculum" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">The curriculum</p>
+    <h2 class="section-q">Week by week, <span class="em">project-first.</span></h2>
+    <p class="section-lede">Every week ends with something shipped and reviewed. There is a mid-cohort capstone before demo day, so nothing reaches the final week untested.</p>
+    <div class="road-grid" style="margin-top:40px;align-items:start">
+      <div>
+        <div class="acc-item"><button class="acc-q"><span class="syl-wk">Week 1</span>Python, OOP and the engineering baseline<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Set the foundation the rest of the cohort is built on — properly structured code, versioned from day one.</p><ul class="syl-list"><li>Environment and project structure — VS Code, Git and GitHub, virtual environments</li><li>Object-oriented design for agent systems: interfaces, composition, dependency injection</li><li>LLM fundamentals — tokens, context windows and cost</li><li>Structured output: typed, validated responses instead of parsed strings</li></ul><p class="syl-ships"><b>You ship:</b> A scaffolded repository and your first validated, typed LLM call.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 2</span>Tool calling and function execution<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>An agent is only useful when it can act. This week it starts doing real work.</p><ul class="syl-list"><li>LangChain chains, tools and memory</li><li>Designing tool schemas — arguments, validation and error paths</li><li>Exploring and integrating a third-party API with Postman</li><li>Retries, timeouts and graceful failure</li></ul><p class="syl-ships"><b>You ship:</b> An agent completing a real task through two or more tools.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 3</span>Multi-agent systems<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Move from one agent to a system of them — with roles, routing and recovery.</p><ul class="syl-list"><li>CrewAI — roles, tasks and delegation</li><li>LangGraph — state machines, branching and recovery paths</li><li>Orchestration patterns: supervisor, sequential and parallel</li><li>Passing state safely between agents</li></ul><p class="syl-ships"><b>You ship:</b> A multi-agent workflow handling a business intent end to end.</p></div></div>
+        <div class="acc-item collapsed syl-cap"><button class="acc-q"><span class="syl-wk">Capstone</span>Mid-cohort review<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Your system is read as code and run as a product, by an engineer who does this in production.</p><ul class="syl-list"><li>Architecture and code review against production standards</li><li>Adversarial run-through — bad inputs, loops, partial failures</li><li>A prioritised hardening plan for weeks 4 to 6</li></ul><p class="syl-ships"><b>You ship:</b> A reviewed multi-agent system and a hardening plan.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 4</span>MCP and backend integration<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Connect your agents to the systems a business actually runs on.</p><ul class="syl-list"><li>Model Context Protocol — servers, resources and tools</li><li>FastAPI: exposing agents as services with auth, rate limits and streaming</li><li>Secrets, permissions and least-privilege access to internal systems</li><li>Integration testing against a real backend</li></ul><p class="syl-ships"><b>You ship:</b> Your agent exposed as an API and reaching a real system through MCP.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 5</span>Evals, guardrails and observability<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Measure the thing before you trust it. This is what separates a demo from a deployment.</p><ul class="syl-list"><li>Building an eval harness and a regression suite</li><li>Guardrails — input validation, output filters, cost and loop ceilings</li><li>Tracing and structured logging across multi-agent runs</li><li>Release gates: what must pass before anything ships</li></ul><p class="syl-ships"><b>You ship:</b> An eval suite your system has to pass before release.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 6</span>Deploy and demo day<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Ship it, prove the numbers, and present it to the room.</p><ul class="syl-list"><li>Containerising the service with Docker — environments and secrets</li><li>Deployment, rollback and cost management</li><li>Runbook and handover documentation</li><li>Demo day — present to mentors and hiring partners</li></ul><p class="syl-ships"><b>You ship:</b> A deployed multi-agent system with its eval report and runbook.</p></div></div>
+      </div>
+      <div class="gantt-wrap reveal">
+        <div class="gantt">
+          <div class="gantt-head"><h3>6 weeks at a glance</h3><p>Live cohort · 24 seats · reviewed weekly by working operators.</p></div>
+          <table class="gantt-table">
+            <thead><tr><th>Phase</th><th>W1</th><th>W2</th><th>W3</th><th>W4</th><th>W5</th><th>W6</th></tr></thead>
+            <tbody>
+              <tr><td>Python, OOP and the engineering baseline</td><td colspan="6"><span class="gantt-bar" style="left:1%;right:86%"></span></td></tr>
+              <tr><td>Tool calling and function execution</td><td colspan="6"><span class="gantt-bar" style="left:14%;right:71%"></span></td></tr>
+              <tr><td>Multi-agent systems</td><td colspan="6"><span class="gantt-bar" style="left:29%;right:57%"></span></td></tr>
+              <tr><td>Mid-cohort review</td><td colspan="6"><span class="gantt-bar brass" style="left:43%;right:43%"></span></td></tr>
+              <tr><td>MCP and backend integration</td><td colspan="6"><span class="gantt-bar" style="left:57%;right:29%"></span></td></tr>
+              <tr><td>Evals, guardrails and observability</td><td colspan="6"><span class="gantt-bar" style="left:71%;right:14%"></span></td></tr>
+              <tr><td>Deploy and demo day</td><td colspan="6"><span class="gantt-bar final" style="left:86%;right:1%"></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SYLLABUS -->
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">What learners say</p>
+    <h2 class="section-q">From this <span class="em">track.</span></h2>
+  </div>
+  <div class="marquee" style="margin-top:36px">
+    <div class="marquee-track lts">
+      <article class="ocard"><div class="ocard-name">Aayush S.</div><div class="ocard-now">AI &amp; Full-Stack Engineer</div><div class="ocard-before"><b>Before Tayana</b>Final-year CS student</div></article>
+      <article class="ocard"><div class="ocard-name">Priya R.</div><div class="ocard-now">AI Engineer · 2 systems shipped</div><div class="ocard-before"><b>Before Tayana</b>Web developer</div></article>
+      <article class="ocard"><div class="ocard-name">Kunal V.</div><div class="ocard-now">ML Platform Engineer</div><div class="ocard-before"><b>Before Tayana</b>Backend developer</div></article>
+      <article class="ocard"><div class="ocard-name">Nainika P.</div><div class="ocard-now">AI &amp; Automation Engineer</div><div class="ocard-before"><b>Before Tayana</b>QA intern</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE:VALUE -->
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Enterprise AI solutions they can deliver</p>
+    <h2 class="section-q">What they <span class="em">ship for you.</span></h2>
+    <div class="deliver-row">
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg></span><span class="dv-t">Autonomous AI Agents</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg></span><span class="dv-t">Enterprise AI Assistants</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg></span><span class="dv-t">Multi-Agent Systems</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><span class="dv-t">AI Workflow Orchestration</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 9l3.5 6.5M16.5 9L13 15.5"/></svg></span><span class="dv-t">Backend AI Services &amp; APIs</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg></span><span class="dv-t">LLM-powered Enterprise Applications</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><span class="dv-t">Intelligent Process Automation</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">For employers</p>
+    <h2 class="section-q">Why hire <span class="em">Pro-Code Agent Engineers?</span></h2>
+    <div class="why-hire">
+      <div class="wh reveal"><div class="wh-n">01</div><div class="wh-t">Build Production-Ready AI</div><div class="wh-d">Develop production AI systems that integrate seamlessly into existing technology stacks.</div></div>
+      <div class="wh reveal"><div class="wh-n">02</div><div class="wh-t">Accelerate AI Product Development</div><div class="wh-d">Reduce development timelines with engineers skilled in modern AI frameworks and backend technologies.</div></div>
+      <div class="wh reveal"><div class="wh-n">03</div><div class="wh-t">Automate Complex Processes</div><div class="wh-d">Design intelligent agents capable of executing multi-step workflows across enterprise systems.</div></div>
+      <div class="wh reveal"><div class="wh-n">04</div><div class="wh-t">Integrate Into Infrastructure</div><div class="wh-d">Leverage APIs, backend services and modern orchestration frameworks to deploy inside existing systems.</div></div>
+      <div class="wh reveal"><div class="wh-n">05</div><div class="wh-t">Scale With Confidence</div><div class="wh-d">Build secure, maintainable and scalable AI applications using industry-standard engineering practices.</div></div>
+    </div>
+    <div class="profile-line">
+      <span class="pl-lab">Sample professional profile</span>
+      <span class="pl-val"><b>AI Agent Engineer</b> | <b>Python | LangChain | CrewAI | LangGraph | MCP | FastAPI</b></span>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+      <a href="hire-talent.html" class="btn btn-primary">Hire from this track <span aria-hidden="true">&#8594;</span></a>
+      <a href="contact.html" class="btn btn-ghost">Talk to admissions</a>
+    </div>
+  </div>
+</section>
+<!-- /ROLE:VALUE -->
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:left">Related Builders tracks</p>
+    <h2 class="section-q" style="text-align:left">Keep <span class="em">building.</span></h2>
+  </div>
+  <div class="hscroll" id="hsRelated" style="margin-top:24px">
+    <a class="tcard" href="track-no-code-agent-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">No-Code Agent Engineers</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+    <a class="tcard" href="track-ai-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">AI Engineer</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+    <a class="tcard" href="track-ml-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">Machine Learning Engineers</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+  </div>
+  <div class="hscroll-ctrl" data-hscroll="hsRelated"><button data-dir="prev" aria-label="Scroll left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button><button data-dir="next" aria-label="Scroll right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button></div>
+</section>
+
+<section class="section-tight" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="quiz-banner reveal">
+      <h3>Ready to <span class="bold">ship</span>?</h3>
+      <p>The masterclass is the door. Register free, see the room, and lock your seat in the next Pro-Code Agent Engineers cohort.</p>
+      <a href="#" class="btn btn-lg" data-toast="Masterclass registration — we'll email your cohort date.">Register for the free masterclass</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="catalog.html" style="color:var(--copper-light)">Career Tracks</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+</body>
+</html>

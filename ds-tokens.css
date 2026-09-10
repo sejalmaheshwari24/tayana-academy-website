@@ -1,0 +1,131 @@
+/* ============================================================
+   TAYANA ACADEMY · VIBRANT MAGICIAN
+   Canonical color + type tokens. Dark-default with light toggle.
+   Indigo (PRIMARY / Builders) · Spring (SUPPORTING / Consumers) ·
+   Sun (attention) · re-skin of the Foundry token contract so every
+   existing page flips by swapping values, not markup.
+   ------------------------------------------------------------
+   :root            = the palette. The site is LIGHT ONLY — there is no dark
+                      theme. Pages still pin <html data-theme="light"> because
+                      some [data-theme="light"] rules key off it; keep it.
+   Variable NAMES are kept from the prior system on purpose:
+   --copper = PRIMARY/Builders accent (now indigo)
+   --brass  = SUPPORTING/Consumers accent (now spring)
+   --iron   = foreground/text + "dark anchor"
+   ============================================================ */
+
+:root {
+  /* ---------- foreground / dark anchor ---------- */
+  --iron:        #1C1D22;   /* primary text on light · dark panels */
+  --iron-lift:   #2A2C34;
+  --iron-border: rgba(255,255,255,.10);
+
+  /* ---------- INDIGO · PRIMARY · Builders ---------- */
+  --copper:      #4A38E8;
+  --copper-light:#7C6BFF;
+  --copper-soft: #E7E3FF;
+  --copper-deep: #3325B8;
+
+  /* ---------- SPRING · SUPPORTING · Consumers ---------- */
+  --brass:       #368634;
+  --brass-light: #6FBF6C;
+  --brass-soft:  #DCF0DB;
+  --brass-deep:  #2B7629;
+
+  /* ---------- SUN / CORAL · attention (max one / screen) ---------- */
+  --ember:       #E5533A;
+  --sun:         #FFD23F;   /* brand-book Sun · badges on accent bands */
+  --ember-soft:  #FBD9D0;
+
+  /* ---------- surfaces + neutrals ---------- */
+  --ash:         #F8F8F6;   /* page bg (near-neutral off-white, de-yellowed) */
+  --ash-border:  #E1DFDA;
+  --sand:        #E8E6F0;   /* text on dark panels */
+  --paper:       #FFFFFF;   /* cards */
+  --steel:       #5A5E66;   /* muted on light */
+  --steel-light: #A5A8AE;   /* muted on dark panels */
+
+  --status-live-bg: var(--brass-soft);   /* was #D8E9D7 + #2F7A2D = 4.2, under AA */
+  --status-live-fg: var(--brass-deep);   /* tracks the pillar token: 4.70 */
+
+  /* ---------- semantic ---------- */
+  --bg:            var(--ash);
+  --bg-card:       var(--paper);
+  --bg-dark:       var(--iron);
+  --fg:            var(--iron);
+  --fg-on-dark:    var(--sand);
+  --fg-muted:      var(--steel);
+  --fg-muted-dark: var(--steel-light);
+  --border:        var(--ash-border);
+  --border-dark:   var(--iron-border);
+  --accent:        var(--copper);
+  --accent-2:      var(--brass);
+
+  /* ---------- type families ---------- */
+  --sans:    'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --display: 'Inter', -apple-system, sans-serif;
+  --mono:    'JetBrains Mono', 'SF Mono', Menlo, ui-monospace, monospace;
+  --serif:   'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  /* ---------- type tokens ---------- */
+  --display-xl:  900 96px/0.96  var(--display);
+  --display-l:   900 72px/0.98  var(--display);
+  --display-m:   800 56px/1.02  var(--display);
+  --h1:          900 88px/1.02  var(--display);
+  --h2:          900 64px/1.04  var(--display);
+  --h3:          800 22px/1.20  var(--display);
+  --tracking-display: -3.4px;
+  --tracking-h2:      -2px;
+  --tracking-h3:      -0.4px;
+  --body-l:      400 18px/1.60  var(--sans);
+  --body:        400 16px/1.55  var(--sans);
+  --body-s:      400 14px/1.50  var(--sans);
+  --label:       600 11px/1.40  var(--mono);
+  --tracking-label: 0.14em;
+  --mono-data:   500 13px/1.50  var(--mono);
+  --tracking-data:  0.04em;
+  --editorial:   italic 400 22px/1.45 var(--serif);
+
+  /* ---------- radii ---------- */
+  --r-pill:  100px;
+  --r-card:  14px;
+  --r-md:    12px;
+  --r-sm:    8px;
+  --r-btn:   6px;
+  --r-chip:  4px;
+
+  /* ---------- motion ---------- */
+  --ease-micro:  cubic-bezier(0.32, 0.04, 0.32, 1);
+  --ease-medium: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-hero:   cubic-bezier(0.16, 1, 0.30, 1);
+  --dur-micro:  180ms;
+  --dur-medium: 320ms;
+  --dur-hero:   520ms;
+  --stagger:    60ms;
+
+  /* ---------- elevation ---------- */
+  --shadow-card:  0 2px 4px rgba(28,29,34,.05), 0 14px 36px rgba(28,29,34,.12);
+  --inset-cta:    inset 0 -3px 0 rgba(51, 37, 184, 0.40);
+
+  color-scheme: light;
+}
+
+/* transitions on the big surfaces (kept for hover/state changes) */
+body, .nav-shell, .footer, .section-dark, .ocard, .tcard, .price-card,
+.stat-card, .calc, .gantt, .story, .proof-artifact {
+  transition: background-color .35s var(--ease-medium), border-color .35s var(--ease-medium), color .35s var(--ease-medium);
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.t-h1   { font: var(--h1);  letter-spacing: var(--tracking-display); text-transform: capitalize; color: var(--fg); }
+.t-h2   { font: var(--h2);  letter-spacing: var(--tracking-h2); text-transform: capitalize; color: var(--fg); }
+.t-h3   { font: var(--h3);  letter-spacing: var(--tracking-h3); color: var(--fg); }
+.t-body { font: var(--body); color: var(--fg); }
+.t-lede { font: 400 18px/1.55 var(--mono); color: var(--fg-muted); }
+.t-label{ font: var(--label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--accent); }
+.t-data { font: var(--mono-data); letter-spacing: var(--tracking-data); }
+.t-em   { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--copper); }
+.copper { color: var(--copper); }
+.brass  { color: var(--brass); }

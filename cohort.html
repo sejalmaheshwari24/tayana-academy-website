@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tayana Academy — AI Engineer · Spring 2026</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="AI Engineer cohort — AI for Distributed Systems, Spring 2026. Week-by-week syllabus, seats, and enrollment. The masterclass unlocks the full curriculum.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Tayana Academy — AI Engineer · Spring 2026">
+  <meta property="og:description" content="AI Engineer cohort — AI for Distributed Systems, Spring 2026. Week-by-week syllabus, seats, and enrollment. The masterclass unlocks the full curriculum.">
+  <meta property="og:url" content="https://tayanaacademy.com/cohort.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tayana Academy — AI Engineer · Spring 2026">
+  <meta name="twitter:description" content="AI Engineer cohort — AI for Distributed Systems, Spring 2026. Week-by-week syllabus, seats, and enrollment. The masterclass unlocks the full curriculum.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .crumb { display:flex; align-items:center; gap:8px; font:500 12px/1 var(--mono); color:var(--steel); padding-top:118px; }
+  .crumb a { color: var(--steel); } .crumb a:hover { color: var(--copper); }
+  .co-head { padding: 22px 0 8px; }
+  .co-tag { display:inline-flex; width:fit-content; align-items:center; gap:7px; font:600 11px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:6px 12px; border-radius: var(--r-pill); background: var(--copper-soft); color: var(--copper-deep); margin-bottom: 16px; }
+  .co-head h1 { font: 900 56px/1.02 var(--display); letter-spacing: -.035em; color: var(--iron); text-transform: none; margin-bottom: 12px; }
+  .co-theme { font: 400 20px/1.4 var(--sans); color: var(--steel); }
+  .co-theme .em { font-family: var(--serif); font-style: italic; color: var(--copper); }
+  .co-body { display:grid; grid-template-columns: 1.5fr .85fr; gap: 48px; margin-top: 40px; align-items:start; }
+  .wk { border:1px solid var(--ash-border); border-radius: var(--r-card); background: var(--paper); overflow:hidden; }
+  .wk-row { display:flex; gap: 18px; padding: 22px 26px; border-bottom: 1px solid var(--ash-border); align-items:flex-start; }
+  .wk-row:last-child { border-bottom: none; }
+  .wk-n { flex-shrink:0; font: 700 11px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color: var(--copper-deep); background: var(--copper-soft); padding: 7px 10px; border-radius: var(--r-chip); }
+  .wk-b h4 { font: 800 17px/1.2 var(--display); color: var(--iron); margin-bottom: 6px; }
+  .wk-b p { font: 400 14px/1.55 var(--sans); color: var(--steel); }
+  .wk-locked { position: relative; }
+  .wk-locked .wk-b { filter: blur(3px); opacity: .55; user-select:none; }
+  .lock-note { display:flex; align-items:center; justify-content:center; gap:10px; padding: 18px; font: 500 14px/1.4 var(--mono); color: var(--steel); background: var(--ash); border-top: 1px dashed var(--ash-border); }
+  .lock-note a { color: var(--copper); font-weight: 600; }
+  .enroll { position: sticky; top: 96px; border:1px solid var(--ash-border); border-radius: var(--r-card); background: var(--paper); padding: 28px; box-shadow: var(--shadow-card); }
+  .enroll .price { font: 900 34px/1 var(--display); color: var(--iron); margin-bottom: 4px; }
+  .enroll .price small { font: 500 12px/1 var(--mono); color: var(--steel); }
+  .enroll .row { display:flex; align-items:center; justify-content:space-between; padding: 13px 0; border-bottom: 1px solid var(--ash-border); }
+  .enroll .row .k { font: 500 12px/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; color: var(--steel); }
+  .enroll .row .v { font: 600 14px/1 var(--sans); color: var(--iron); }
+  .enroll .v.ember { color: var(--copper-deep); }
+  .enroll .btn { width: 100%; margin-top: 20px; justify-content:center; }
+  .enroll .fine { font: 500 11px/1.5 var(--mono); color: var(--steel); text-align:center; margin-top: 12px; }
+  @media (max-width: 900px){ .co-body { grid-template-columns: 1fr; } .enroll { position: static; } .co-head h1 { font-size: 40px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="index.html#outcomes">Outcomes</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="hire-talent.html">Hire</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="contact.html" class="btn btn-primary" style="padding:11px 22px" data-toast="Masterclass registration — we'll email your cohort date.">Register free</a></div>
+</div></div></nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="catalog.html">Career Tracks</a> <span>›</span> <a href="builders.html">Builders</a> <span>›</span> <span style="color:var(--iron)">AI Engineer</span></div>
+</div>
+
+<header class="co-head">
+  <div class="wrap">
+    <span class="co-tag">▲ Builders cohort · Full-stack path</span>
+    <h1>AI Engineer</h1>
+    <p class="co-theme">Cohort theme — <span class="em">AI for Distributed Systems</span> · Spring 2026</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 12px">
+  <div class="wrap">
+    <div class="co-body">
+      <div>
+        <p class="eyebrow">Week by week</p>
+        <h2 class="section-q" style="text-align:left; font-size: 34px; margin-bottom: 24px">Six weeks, <span class="em">one shipped system.</span></h2>
+        <div class="wk">
+          <div class="wk-row"><span class="wk-n">Wk 01</span><div class="wk-b"><h4>Foundations &amp; setup</h4><p>Orion onboarding, the AI Foundation refresher, and the shape of your capstone. You leave week one with a project brief on real data.</p></div></div>
+          <div class="wk-row"><span class="wk-n">Wk 02</span><div class="wk-b"><h4>RAG &amp; retrieval</h4><p>Vector databases, chunking strategies and evaluation. Build a retrieval layer against a live corpus and measure recall.</p></div></div>
+          <div class="wk-row wk-locked"><span class="wk-n">Wk 03</span><div class="wk-b"><h4>Agents &amp; tool use</h4><p>Routing, recovery and MCP. Wire an agent that calls real tools and handles failure gracefully in a distributed setting.</p></div></div>
+          <div class="wk-row wk-locked"><span class="wk-n">Wk 04</span><div class="wk-b"><h4>Evals &amp; observability</h4><p>Build the eval harness and the traces you'll defend in review. Instrument latency, cost and quality end to end.</p></div></div>
+          <div class="lock-note"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> Weeks 3–6 unlock when you <a href="contact.html" data-toast="Masterclass registration — we'll email your cohort date.">register for the masterclass</a>.</div>
+        </div>
+      </div>
+      <aside>
+        <div class="enroll">
+          <!-- PRICING FIGURE REMOVED (founder decision, Jul 2026): was $2,400 / cohort. Restore only when real pricing is confirmed. -->
+            <div class="price" style="font-size:20px">Shared at the masterclass</div>
+          <div class="row"><span class="k">Duration</span><span class="v">6 weeks · blended</span></div>
+          <div class="row"><span class="k">Next start</span><span class="v">Mon, Jun 1 2026</span></div>
+          <div class="row"><span class="k">Seats left</span><span class="v ember">7 of 24</span></div>
+          <div class="row"><span class="k">Path</span><span class="v">Full-Stack</span></div>
+          <div class="row"><span class="k">Format</span><span class="v">Project-first · Orion</span></div>
+          <a href="contact.html" class="btn btn-primary" data-toast="Masterclass registration — we'll email your cohort date.">Register for the free masterclass</a>
+          <div class="fine">Free masterclass · no commitment</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="catalog.html" style="color:var(--copper-light)">Career Tracks</a> · <a href="builders.html" style="color:var(--copper-light)">Builders</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+</body>
+</html>

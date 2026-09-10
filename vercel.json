@@ -1,0 +1,44 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python3 scripts/audit-course-language.py && python3 scripts/stamp-build.py",
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/track-agentic-lowcode.html",
+      "destination": "/track-no-code-agent-engineer.html",
+      "permanent": true
+    },
+    {
+      "source": "/track-agentic-fullcode.html",
+      "destination": "/track-pro-code-agent-engineer.html",
+      "permanent": true
+    },
+    {
+      "source": "/track-ai-engineering.html",
+      "destination": "/track-ai-engineer.html",
+      "permanent": true
+    },
+    {
+      "source": "/track-ml-engineering.html",
+      "destination": "/track-ml-engineer.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}

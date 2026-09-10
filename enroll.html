@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll — Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="description" content="Reserve your seat in the next Tayana Academy cohort. UPI, cards and netbanking via Razorpay.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Enroll — Tayana Academy">
+  <meta property="og:description" content="Reserve your seat in the next Tayana Academy cohort. UPI, cards and netbanking via Razorpay.">
+  <meta property="og:url" content="https://tayanaacademy.com/enroll.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enroll — Tayana Academy">
+  <meta name="twitter:description" content="Reserve your seat in the next Tayana Academy cohort. UPI, cards and netbanking via Razorpay.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .en-wrap { max-width: 1080px; margin: 0 auto; padding: 130px 24px 80px; }
+  .en-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items: start; margin-top: 36px; }
+  .en-tracks { display: flex; flex-direction: column; gap: 12px; }
+  .en-track { position: relative; display: flex; align-items: center; gap: 16px; min-width: 0; padding: 18px 20px; background: var(--paper); border: 1.5px solid var(--ash-border); border-radius: var(--r-card); cursor: pointer; transition: border-color var(--dur-micro), box-shadow var(--dur-micro); }
+  .en-track:hover { border-color: var(--copper); }
+  .en-track.on { border-color: var(--copper); box-shadow: 0 10px 30px rgba(74,56,232,.14); }
+  .en-track input { accent-color: var(--copper); width: 18px; height: 18px; }
+  .en-track .tn { font: 700 15px/1.3 var(--sans); color: var(--iron); }
+  .en-track .tm { font: 500 11px/1.5 var(--mono); color: var(--steel); letter-spacing: .03em; }
+  .en-track .tp { margin-left: auto; font: 800 16px/1 var(--display); color: var(--copper); white-space: nowrap; }
+  .en-track .tp.tbd { font: 600 10.5px/1.4 var(--mono); color: var(--steel); text-transform: uppercase; letter-spacing: .05em; max-width: 110px; text-align: right; white-space: normal; flex-shrink: 0; }
+  .en-pane { position: sticky; top: 96px; background: var(--paper); border: 1px solid var(--ash-border); border-radius: var(--r-card); padding: 26px; box-shadow: var(--shadow-card); }
+  .en-pane h3 { font: 800 19px/1.2 var(--display); color: var(--iron); margin-bottom: 4px; }
+  .en-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--ash-border); font: 400 13.5px/1.4 var(--sans); color: var(--steel); }
+  .en-row b { font: 700 13.5px/1 var(--sans); color: var(--iron); }
+  .en-total { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0 6px; }
+  .en-total .lab { font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--steel); }
+  .en-total .amt { font: 900 30px/1 var(--display); color: var(--iron); letter-spacing: -.02em; }
+  .en-field { margin: 12px 0 0; }
+  .en-field label { display: block; font: 600 10.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 7px; }
+  .en-field input { width: 100%; font: 400 14px/1 var(--sans); padding: 13px 14px; border-radius: 10px; border: 1px solid var(--ash-border); background: var(--ash); color: var(--iron); outline: none; }
+  .en-field input:focus { border-color: var(--copper); }
+  .en-pay { width: 100%; margin-top: 18px; justify-content: center; }
+  .en-upi { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 12px; font: 500 11px/1 var(--mono); color: var(--steel); letter-spacing: .04em; }
+  .en-upi span { padding: 5px 9px; background: var(--ash); border: 1px solid var(--ash-border); border-radius: 4px; }
+  .en-note { margin-top: 14px; font: 400 12px/1.6 var(--sans); color: var(--steel); text-align: center; }
+  @media (max-width: 880px) { .en-grid { grid-template-columns: 1fr; } .en-pane { position: static; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-right"><a href="contact.html" class="btn btn-ghost" style="padding:11px 22px">Free masterclass</a></div>
+</div></div></nav>
+
+<div class="en-wrap">
+  <p class="eyebrow" style="margin-left:0;margin-right:auto">Enrollment</p>
+  <h1 class="section-q" style="text-align:left">Reserve your <span class="em">seat.</span></h1>
+  <p class="section-lede" style="text-align:left;margin-left:0">Pick your programme, pay securely with UPI, card or netbanking. Application-based selection — payment confirms your place in the review queue for the next cohort.</p>
+
+  <div class="en-grid">
+    <div class="en-tracks" id="enTracks" role="radiogroup" aria-label="Choose your programme"></div>
+
+    <aside class="en-pane">
+      <h3>Your seat</h3>
+      <div class="en-row"><span>Programme</span><b id="sumTrack">—</b></div>
+      <div class="en-row"><span>Length</span><b id="sumWeeks">—</b></div>
+      <div class="en-row"><span>Cohort</span><b>Next intake · 1st &amp; 15th</b></div>
+      <div class="en-total"><span class="lab">Total</span><span class="amt" id="sumAmt">—</span></div>
+      <div class="en-field"><label for="pName">Full name</label><input id="pName" type="text" autocomplete="name" placeholder="Your name"></div>
+      <div class="en-field"><label for="pEmail">Email</label><input id="pEmail" type="email" autocomplete="email" placeholder="you@email.com"></div>
+      <div class="en-field"><label for="pPhone">Phone (UPI)</label><input id="pPhone" type="tel" autocomplete="tel" placeholder="+91"></div>
+      <button class="btn btn-primary btn-lg en-pay" id="payBtn" disabled>Select a programme</button>
+      <div class="en-upi"><span>UPI</span><span>GPay</span><span>PhonePe</span><span>Cards</span><span>Netbanking</span></div>
+      <p class="en-note" id="payNote">Payments are processed by Razorpay. You'll receive a receipt by email.</p>
+    </aside>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper)">Home</a> · <a href="pricing.html" style="color:var(--copper)">What every seat includes</a></div>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="payments-config.js"></script>
+<script>
+(function () {
+  var C = window.TAYANA_PAY || {}; var tracks = C.TRACKS || {};
+  var listEl = document.getElementById('enTracks');
+  var sel = null;
+  var fmt = function (p) { return "₹" + Number(p).toLocaleString("en-IN"); };
+
+  Object.keys(tracks).forEach(function (id) {
+    var t = tracks[id];
+    var l = document.createElement('label');
+    l.className = 'en-track';
+    l.innerHTML = '<input type="radio" name="track" value="' + id + '">' +
+      '<span><span class="tn">' + t.name + '</span><br><span class="tm">' + (t.length || (t.weeks + ' weeks')) + ' · live · ' + t.seats + ' seats</span></span>' +
+      (t.price ? '<span class="tp">' + fmt(t.price) + '</span>' : '<span class="tp tbd">Pricing at the masterclass</span>');
+    l.addEventListener('click', function () { pick(id, l); });
+    listEl.appendChild(l);
+  });
+
+  var btn = document.getElementById('payBtn');
+  function pick(id, el) {
+    sel = id;
+    document.querySelectorAll('.en-track').forEach(function (x) { x.classList.remove('on'); });
+    el.classList.add('on'); el.querySelector('input').checked = true;
+    var t = tracks[id];
+    document.getElementById('sumTrack').textContent = t.name;
+    document.getElementById('sumWeeks').textContent = (t.length || (t.weeks + ' weeks')) + ' · ' + t.seats + ' seats';
+    document.getElementById('sumAmt').textContent = t.price ? fmt(t.price) : '—';
+    if (!C.RAZORPAY_KEY_ID) { btn.disabled = true; btn.textContent = 'Payments launching soon'; }
+    else if (!t.price) { btn.disabled = true; btn.textContent = 'Pricing at the masterclass'; }
+    else { btn.disabled = false; btn.textContent = 'Pay ' + fmt(t.price) + ' — UPI / Card →'; }
+  }
+
+  function toast(m) { var t = document.getElementById('toast'); t.textContent = m; t.classList.add('show'); setTimeout(function () { t.classList.remove('show'); }, 3200); }
+
+  btn.addEventListener('click', function () {
+    var t = tracks[sel]; if (!t || !t.price || !C.RAZORPAY_KEY_ID) return;
+    var name = document.getElementById('pName').value.trim();
+    var email = document.getElementById('pEmail').value.trim();
+    var phone = document.getElementById('pPhone').value.trim();
+    if (!name || !email) { toast('Add your name and email first.'); return; }
+    btn.disabled = true; btn.textContent = 'Preparing secure checkout…';
+    fetch('/api/create-order', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: t.price * 100, track: sel, name: name, email: email, phone: phone })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (!d.order_id) throw new Error(d.error || 'Order failed');
+      var s = document.createElement('script'); s.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      s.onload = function () {
+        new window.Razorpay({
+          key: d.key_id, order_id: d.order_id, amount: d.amount, currency: 'INR',
+          name: C.BUSINESS_NAME, description: t.name, theme: { color: C.THEME_COLOR },
+          prefill: { name: name, email: email, contact: phone },
+          handler: function (resp) {
+            toast('Payment received — check your email for the receipt.');
+            btn.textContent = 'Seat reserved ✓';
+            if (C.SUCCESS_WEBHOOK) fetch(C.SUCCESS_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ payment_id: resp.razorpay_payment_id, order_id: resp.razorpay_order_id, track: sel, name: name, email: email, phone: phone }) });
+          },
+          modal: { ondismiss: function () { btn.disabled = false; btn.textContent = 'Pay ' + fmt(t.price) + ' — UPI / Card →'; } }
+        }).open();
+      };
+      document.body.appendChild(s);
+    }).catch(function (e) {
+      toast(e.message || 'Something went wrong — try again or email hello@tayanaacademy.com');
+      btn.disabled = false; btn.textContent = 'Pay ' + fmt(t.price) + ' — UPI / Card →';
+    });
+  });
+
+  var qs = new URLSearchParams(location.search).get('track');
+  if (qs && tracks[qs]) { var el = listEl.children[Object.keys(tracks).indexOf(qs)]; if (el) pick(qs, el); }
+})();
+</script>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+</body>
+</html>

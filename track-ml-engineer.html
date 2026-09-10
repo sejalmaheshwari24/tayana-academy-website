@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Learning Engineers — Builders track · Tayana Academy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Train, evaluate and operate models end to end. Data pipelines, training, MLOps and serving across six project-first weeks — ship a complete ML system.">
+  <!-- OG:START -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tayana Academy">
+  <meta property="og:title" content="Machine Learning Engineers — Builders track · Tayana Academy">
+  <meta property="og:description" content="Train, evaluate and operate models end to end. Data pipelines, training, MLOps and serving across six project-first weeks — ship a complete ML system.">
+  <meta property="og:url" content="https://tayanaacademy.com/track-ml-engineer.html">
+  <meta property="og:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tayana Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Machine Learning Engineers — Builders track · Tayana Academy">
+  <meta name="twitter:description" content="Train, evaluate and operate models end to end. Data pipelines, training, MLOps and serving across six project-first weeks — ship a complete ML system.">
+  <meta name="twitter:image" content="https://tayanaacademy.com/assets/og-card.png">
+  <!-- OG:END -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds-tokens.css">
+<link rel="stylesheet" href="tayana-2026.css">
+<style>
+  .crumb { display:flex; align-items:center; gap:8px; font:500 12px/1 var(--mono); color:var(--steel); padding-top:118px; }
+  .crumb a:hover { color:var(--copper); } .crumb .sep { color:var(--ash-border); }
+  .td-hero { display:grid; grid-template-columns:1.45fr .9fr; gap:40px; align-items:start; padding:26px 0 8px; }
+  .td-name { font:900 clamp(2.4rem,5vw,4rem)/1.02 var(--display); letter-spacing:-.035em; color:var(--iron); text-transform:none; margin:14px 0 16px; }
+  .td-name .em { font-family:var(--serif); font-style:italic; font-weight:400; color:var(--copper); }
+  .td-lede { font:400 18px/1.6 var(--sans); color:var(--steel); max-width:54ch; }
+  .td-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+  .td-chip { display:inline-flex; align-items:center; gap:7px; font:600 12px/1 var(--mono); letter-spacing:.04em; color:var(--iron); background:var(--paper); border:1px solid var(--ash-border); padding:9px 14px; border-radius:var(--r-pill); }
+  .td-chip .star { color:var(--copper); }
+  .enroll { background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-card); padding:26px; box-shadow:var(--shadow-card); position:sticky; top:96px; }
+  .enroll .er { display:flex; align-items:center; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--ash-border); font: 400 14px/1.3 var(--sans); color:var(--steel); }
+  .enroll .er:last-of-type { border-bottom:none; }
+  .enroll .er b { font:700 14px/1 var(--sans); color:var(--iron); }
+  .enroll .er .seats { color:var(--ember); }
+  .enroll .btn { width:100%; margin-top:18px; }
+  .ship-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .ship-item { display:flex; gap:13px; align-items:flex-start; background:var(--paper); border:1px solid var(--ash-border); border-radius:var(--r-md); padding:20px; }
+  .ship-item .ico { width:38px; height:38px; flex-shrink:0; border-radius:var(--r-sm); background:var(--copper-soft); color:var(--copper-deep); display:flex; align-items:center; justify-content:center; }
+  .ship-item .ico svg { width:20px; height:20px; }
+  .ship-item .t { font:700 15px/1.3 var(--sans); color:var(--iron); margin-bottom:3px; }
+  .ship-item .d { font: 400 14px/1.5 var(--sans); color:var(--steel); }
+  @media(max-width:880px){ .td-hero{grid-template-columns:1fr} .enroll{position:static} .ship-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-inner"><div class="nav-shell">
+  <a href="index.html" class="brand-mark" aria-label="Tayana Academy">
+    <img src="assets/logos/tayana-icon-new.png" width="40" height="36" alt="Tayana Academy" style="display:block;object-fit:contain">
+    <div><span class="brand-name">Tayana</span><span class="brand-sub">Academy</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="catalog.html" style="color:var(--copper)">Career Tracks</a>
+    <a href="pillars.html">Pillars</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#mentors">Mentors</a>
+    <a href="experts.html">Experts</a>
+    <a href="outcomes.html">Outcomes</a>
+    <a href="hire-talent.html">Hire</a>
+    <a href="pricing.html">Pricing</a>
+  </div>
+  <div class="nav-right"><a href="#" class="nav-login">Log in</a><a href="#enroll" class="btn btn-primary" style="padding:11px 22px" data-toast="Masterclass registration — we'll email your cohort date.">Register free</a></div>
+</div></div></nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="catalog.html">Career Tracks</a><span class="sep">·</span><a href="pillars.html">Builders</a><span class="sep">·</span><span style="color:var(--iron)">Machine Learning Engineers</span></div>
+  <div class="td-hero">
+    <div>
+      <div class="tag-frame copper"><span class="cb-tl"></span><span class="cb-tr"></span><span class="cb-bl"></span><span class="cb-br"></span><span class="tag">▲ Builders · 6-week track · Python required</span></div>
+      <h1 class="td-name">Machine Learning <span class="em">Engineers</span></h1>
+      <p class="td-lede">Models that make it to production. Six project-first weeks from data pipelines through training, evaluation, serving and MLOps. You leave with an end-to-end ML system — trained, evaluated, served and monitored.</p>
+      <div class="td-meta"><span class="td-chip"><span class="star">★</span> 4.8 · 120 reviews</span>
+        <span class="td-chip">6 weeks · live cohort</span>
+        <span class="td-chip">24 seats max</span>
+        <span class="td-chip">Python required</span></div>
+    </div>
+    <aside class="enroll" id="enroll">
+      <div class="er"><span>Next cohort</span><b>AI for Distributed Systems</b></div>
+      <div class="er"><span>Starts</span><b>Jun 1, 2026</b></div>
+      <div class="er"><span>Cadence</span><b>1st &amp; 15th monthly</b></div>
+      <div class="er"><span>Seats left</span><b class="seats">9 of 24</b></div>
+      <div class="er"><span>Outcome</span><b>End-to-end ML system</b></div>
+      <a href="enroll.html?track=ml-engineer" class="btn btn-primary">Reserve your seat &#8594;</a>
+      <a href="contact.html" class="btn btn-ghost" style="width:100%;margin-top:10px" data-toast="Masterclass registration — we'll email your cohort date.">Free masterclass first</a>
+      <a href="#" class="btn btn-ghost" style="width:100%;margin-top:10px" data-toast="We'll send the full week-by-week after the masterclass.">Get the syllabus</a>
+      <a href="assets/one-pagers/ml-engineer.jpg" download class="btn btn-ghost" style="width:100%;margin-top:10px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg> Download the one-pager</a>
+    </aside>
+  </div>
+</div>
+
+<!-- ROLE:DEFINITION -->
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="role-triad">
+      <span class="rt-words">Data-driven. Model-centric. Impactful.</span>
+      <span class="role-entry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 4.5-3.4 8.6-8 9.5-4.6-.9-8-5-8-9.5v-5z"/><path d="M9 12l2 2 4-4"/></svg>Entry · Python Assessment / Python Foundation</span>
+    </div>
+    <p class="section-lede" style="text-align:left;margin-left:0">Machine Learning Engineers are trained to design, develop and deploy scalable ML and deep learning solutions. They combine strong foundations in statistics, algorithms and engineering to build intelligent systems that solve real-world problems and create measurable business value.</p>
+    <div class="road-grid" style="margin-top:38px;align-items:start">
+      <div>
+        <p class="eyebrow" style="text-align:left;margin-left:0">Core technical capabilities</p>
+        <ul class="cap-list" style="margin-top:16px">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Python Programming &amp; Statistics</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg>Machine Learning</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg>Deep Learning</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>Feature Engineering</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg>Model Training &amp; Evaluation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Computer Vision</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6"/></svg>Natural Language Processing (NLP)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg>MLOps &amp; Model Deployment</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow" style="text-align:left;margin-left:0">Technologies &amp; tools</p>
+        <div class="tool-wall">
+        <span class="tool-chip"><img src="assets/logos/python.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Python</span>
+        <span class="tool-chip"><img src="assets/logos/numpy.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">NumPy</span>
+        <span class="tool-chip"><img src="assets/logos/pandas.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Pandas</span>
+        <span class="tool-chip"><img src="assets/logos/scikit-learn.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Scikit-learn</span>
+        <span class="tool-chip"><img src="assets/logos/tensorflow.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">TensorFlow</span>
+        <span class="tool-chip"><img src="assets/logos/pytorch.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">PyTorch</span>
+        <span class="tool-chip"><img src="assets/logos/mlflow.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">MLflow</span>
+        <span class="tool-chip"><img src="assets/logos/huggingface.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Hugging Face</span>
+        <span class="tool-chip"><img src="assets/logos/docker.svg" alt="" aria-hidden="true" loading="lazy" width="19" height="19">Docker</span>
+        </div>
+        <p class="tool-note">Engineers are proficient in building, training, tracking and deploying ML models using modern MLOps practices and industry-standard tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /ROLE:DEFINITION -->
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:left">What you'll ship</p>
+    <h2 class="section-q" style="text-align:left;max-width:16ch">Four pieces of <span class="em">proof.</span></h2>
+    <div class="ship-grid" style="margin-top:34px">
+      <div class="ship-item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></span><div><div class="t">A clean data pipeline</div><div class="d">From raw sources to a training set you can defend.</div></div></div>
+      <div class="ship-item reveal r1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="16" r="3"/><path d="M10 8h4M9 10l6 4"/></svg></span><div><div class="t">A trained, evaluated model</div><div class="d">Baselines first — then beat them honestly with error analysis.</div></div></div>
+      <div class="ship-item reveal r2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg></span><div><div class="t">A serving endpoint</div><div class="d">Batch and real-time paths, behind an interface something can call.</div></div></div>
+      <div class="ship-item reveal r3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg></span><div><div class="t">A monitoring loop</div><div class="d">Versioning, drift detection and retraining — the system stays alive after demo day.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYLLABUS -->
+<section class="section" id="curriculum" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">The curriculum</p>
+    <h2 class="section-q">Week by week, <span class="em">project-first.</span></h2>
+    <p class="section-lede">Every week ends with something shipped and reviewed. There is a mid-cohort capstone before demo day, so nothing reaches the final week untested.</p>
+    <div class="road-grid" style="margin-top:40px;align-items:start">
+      <div>
+        <div class="acc-item"><button class="acc-q"><span class="syl-wk">Week 1</span>Problem framing, statistics and data pipelines<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Most model failures are framing failures. You start by defining what "good" means and building a set you can trust.</p><ul class="syl-list"><li>Framing: what to predict, what to optimise, and the baseline to beat</li><li>NumPy and Pandas — cleaning, joins and the leakage traps that invalidate results</li><li>Statistics that matter in practice: distributions, sampling and significance</li><li>Splitting data honestly — train, validation and test</li></ul><p class="syl-ships"><b>You ship:</b> A clean, documented training set and a stated success metric.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 2</span>Feature engineering and classical machine learning<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Beat a sensible baseline with methods you can explain, before reaching for anything deeper.</p><ul class="syl-list"><li>Scikit-learn pipelines, cross-validation and hyperparameter search</li><li>Feature engineering — encoding, scaling and selection</li><li>Choosing the metric that matches the business question</li><li>Reading a confusion matrix like an operator, not a statistician</li></ul><p class="syl-ships"><b>You ship:</b> A trained baseline model that beats a naive benchmark, with results you can defend.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 3</span>Deep learning across vision and language<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Apply deep learning where it earns its cost — and learn to tell when it does not.</p><ul class="syl-list"><li>Training loops and transfer learning in TensorFlow or PyTorch</li><li>Computer vision task patterns — classification, detection, segmentation</li><li>Natural language processing with Hugging Face models</li><li>Error analysis: when to fix the data instead of the architecture</li></ul><p class="syl-ships"><b>You ship:</b> A trained deep-learning model with a documented error analysis.</p></div></div>
+        <div class="acc-item collapsed syl-cap"><button class="acc-q"><span class="syl-wk">Capstone</span>Mid-cohort review<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Your model is reviewed against the brief you wrote in week 1 — including whether it should exist.</p><ul class="syl-list"><li>Results review against the stated success metric</li><li>Data, leakage and reproducibility audit</li><li>A prioritised plan for tracking, serving and monitoring</li></ul><p class="syl-ships"><b>You ship:</b> A reviewed model and a plan to production.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 4</span>Experiment tracking and model management<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Make every result reproducible and every model accountable.</p><ul class="syl-list"><li>MLflow — runs, parameters, artifacts and the model registry</li><li>Versioning data alongside models</li><li>Comparing experiments honestly</li><li>Model cards: documenting intended use and known limits</li></ul><p class="syl-ships"><b>You ship:</b> Your experiments tracked and your best model registered with a model card.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 5</span>Serving and MLOps<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>A model that nothing can call is not a system. This week it goes behind an endpoint.</p><ul class="syl-list"><li>Containerising with Docker for reproducible serving</li><li>Batch and real-time serving paths</li><li>Monitoring drift, data quality and performance decay</li><li>Retraining loops and rollback</li></ul><p class="syl-ships"><b>You ship:</b> Your model served behind an endpoint, with monitoring in place.</p></div></div>
+        <div class="acc-item collapsed"><button class="acc-q"><span class="syl-wk">Week 6</span>End-to-end system and demo day<svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button><div class="acc-body"><p>Prove the whole pipeline holds, from raw data to a monitored prediction.</p><ul class="syl-list"><li>Cost, scale and failure modes end to end</li><li>Portfolio packaging — what a hiring team needs to see</li><li>Runbook and handover documentation</li><li>Demo day — present to mentors and hiring partners</li></ul><p class="syl-ships"><b>You ship:</b> An end-to-end ML system with its model card and runbook.</p></div></div>
+      </div>
+      <div class="gantt-wrap reveal">
+        <div class="gantt">
+          <div class="gantt-head"><h3>6 weeks at a glance</h3><p>Live cohort · 24 seats · reviewed weekly by working operators.</p></div>
+          <table class="gantt-table">
+            <thead><tr><th>Phase</th><th>W1</th><th>W2</th><th>W3</th><th>W4</th><th>W5</th><th>W6</th></tr></thead>
+            <tbody>
+              <tr><td>Problem framing, statistics and data pipelines</td><td colspan="6"><span class="gantt-bar" style="left:1%;right:86%"></span></td></tr>
+              <tr><td>Feature engineering and classical machine learning</td><td colspan="6"><span class="gantt-bar" style="left:14%;right:71%"></span></td></tr>
+              <tr><td>Deep learning across vision and language</td><td colspan="6"><span class="gantt-bar" style="left:29%;right:57%"></span></td></tr>
+              <tr><td>Mid-cohort review</td><td colspan="6"><span class="gantt-bar brass" style="left:43%;right:43%"></span></td></tr>
+              <tr><td>Experiment tracking and model management</td><td colspan="6"><span class="gantt-bar" style="left:57%;right:29%"></span></td></tr>
+              <tr><td>Serving and MLOps</td><td colspan="6"><span class="gantt-bar" style="left:71%;right:14%"></span></td></tr>
+              <tr><td>End-to-end system and demo day</td><td colspan="6"><span class="gantt-bar final" style="left:86%;right:1%"></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SYLLABUS -->
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">What learners say</p>
+    <h2 class="section-q">From this <span class="em">track.</span></h2>
+  </div>
+  <div class="marquee" style="margin-top:36px">
+    <div class="marquee-track lts">
+      <article class="ocard"><div class="ocard-name">Aayush S.</div><div class="ocard-now">AI &amp; Full-Stack Engineer</div><div class="ocard-before"><b>Before Tayana</b>Final-year CS student</div></article>
+      <article class="ocard"><div class="ocard-name">Priya R.</div><div class="ocard-now">AI Engineer · 2 systems shipped</div><div class="ocard-before"><b>Before Tayana</b>Web developer</div></article>
+      <article class="ocard"><div class="ocard-name">Kunal V.</div><div class="ocard-now">ML Platform Engineer</div><div class="ocard-before"><b>Before Tayana</b>Backend developer</div></article>
+      <article class="ocard"><div class="ocard-name">Nainika P.</div><div class="ocard-now">AI &amp; Automation Engineer</div><div class="ocard-before"><b>Before Tayana</b>QA intern</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE:VALUE -->
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Enterprise ML solutions they can deliver</p>
+    <h2 class="section-q">What they <span class="em">ship for you.</span></h2>
+    <div class="deliver-row">
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg></span><span class="dv-t">Predictive Models</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="dv-t">Computer Vision Applications</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6"/></svg></span><span class="dv-t">NLP &amp; Language Intelligence</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span><span class="dv-t">Recommendation Systems</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h11a4 4 0 000-8 6 6 0 00-11.7 1.8A3.5 3.5 0 006 18z"/></svg></span><span class="dv-t">End-to-End ML Pipelines</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 10h8"/></svg></span><span class="dv-t">MLOps &amp; Model Deployment</span></div>
+      <div class="deliver reveal"><span class="dv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h11a4 4 0 000-8 6 6 0 00-11.7 1.8A3.5 3.5 0 006 18z"/></svg></span><span class="dv-t">Scalable Production ML Systems</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <p class="eyebrow">For employers</p>
+    <h2 class="section-q">Why hire <span class="em">Machine Learning Engineers?</span></h2>
+    <div class="why-hire">
+      <div class="wh reveal"><div class="wh-n">01</div><div class="wh-t">Solve Real-World Problems</div><div class="wh-d">Build data-driven solutions that address complex business challenges and drive measurable impact.</div></div>
+      <div class="wh reveal"><div class="wh-n">02</div><div class="wh-t">Make Better Decisions</div><div class="wh-d">Transform data into accurate predictions and insights that improve business outcomes.</div></div>
+      <div class="wh reveal"><div class="wh-n">03</div><div class="wh-t">Automate &amp; Optimise Processes</div><div class="wh-d">Leverage ML to automate manual work, optimise operations and reduce costs.</div></div>
+      <div class="wh reveal"><div class="wh-n">04</div><div class="wh-t">Deploy at Scale</div><div class="wh-d">Deliver production-ready ML models with robust pipelines, monitoring and MLOps best practices.</div></div>
+      <div class="wh reveal"><div class="wh-n">05</div><div class="wh-t">Future-Proof Your Business</div><div class="wh-d">Build intelligent systems that adapt, learn and create long-term competitive advantage.</div></div>
+    </div>
+    <div class="profile-line">
+      <span class="pl-lab">Sample professional profile</span>
+      <span class="pl-val"><b>Machine Learning Engineer</b> | <b>Python | TensorFlow | PyTorch | MLOps | Deep Learning | NLP | CV</b></span>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+      <a href="hire-talent.html" class="btn btn-primary">Hire from this track <span aria-hidden="true">&#8594;</span></a>
+      <a href="contact.html" class="btn btn-ghost">Talk to admissions</a>
+    </div>
+  </div>
+</section>
+<!-- /ROLE:VALUE -->
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:left">Related Builders tracks</p>
+    <h2 class="section-q" style="text-align:left">Keep <span class="em">building.</span></h2>
+  </div>
+  <div class="hscroll" id="hsRelated" style="margin-top:24px">
+    <a class="tcard" href="track-no-code-agent-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">No-Code Agent Engineers</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+    <a class="tcard" href="track-pro-code-agent-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">Pro-Code Agent Engineers</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+    <a class="tcard" href="track-ai-engineer.html" style="text-decoration:none"><div class="tcard-top"><div class="tcard-kind">Builders career track</div><div class="tcard-name">AI Engineer</div><div class="tcard-desc">See the full week-by-week, what you ship, and the next cohort.</div></div><div class="tcard-foot"><span class="lab">View track</span><span class="val">&#8594;</span></div></a>
+  </div>
+  <div class="hscroll-ctrl" data-hscroll="hsRelated"><button data-dir="prev" aria-label="Scroll left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button><button data-dir="next" aria-label="Scroll right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button></div>
+</section>
+
+<section class="section-tight" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="quiz-banner reveal">
+      <h3>Ready to <span class="bold">ship</span>?</h3>
+      <p>The masterclass is the door. Register free, see the room, and lock your seat in the next Machine Learning Engineers cohort.</p>
+      <a href="#" class="btn btn-lg" data-toast="Masterclass registration — we'll email your cohort date.">Register for the free masterclass</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <div class="footer-copy">Tayana Academy © 2026 · Founded 2023 · <a href="index.html" style="color:var(--copper-light)">Home</a> · <a href="catalog.html" style="color:var(--copper-light)">Career Tracks</a></div>
+      <div class="footer-rating"><span>4.9</span><span class="rd">· 2,000+ alumni</span></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<script src="tayana-2026.js"></script>
+<script src="tayana-chat.js"></script>
+</body>
+</html>
