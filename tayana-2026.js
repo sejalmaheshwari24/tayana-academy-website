@@ -147,13 +147,17 @@
   }
 
   /* ---- tab browser ---- */
+  function selectTab(key) {
+    var btn = $$('.tab-btn').filter(function (b) { return b.getAttribute('data-tab') === key; })[0];
+    if (!btn) return;
+    $$('.tab-btn').forEach(function (x) { x.classList.toggle('on', x === btn); });
+    $$('.tab-panel').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-panel') === key); });
+  }
   $$('.tab-btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var key = b.getAttribute('data-tab');
-      $$('.tab-btn').forEach(function (x) { x.classList.toggle('on', x === b); });
-      $$('.tab-panel').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-panel') === key); });
-    });
+    b.addEventListener('click', function () { selectTab(b.getAttribute('data-tab')); });
   });
+  // A link like catalog.html#consumers opens straight into that tab.
+  if (location.hash) selectTab(location.hash.slice(1));
 
   /* ---- horizontal scroll controls ---- */
   $$('[data-hscroll]').forEach(function (ctrl) {
