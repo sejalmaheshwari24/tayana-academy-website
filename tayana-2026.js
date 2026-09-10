@@ -249,4 +249,52 @@
       showToast(b.getAttribute('data-toast'));
     });
   });
+
+  /* ---- consultation CTA dropdown (email / call) ---- */
+  // .consult-menu is moved to <body> and positioned as position:fixed
+  // in viewport px. A plain position:fixed descendant is only
+  // guaranteed to escape an ancestor's overflow:hidden clipping (e.g.
+  // .quiz-banner's clipped stripe background) as long as no ancestor
+  // has a transform/filter/will-change — several sections use .reveal,
+  // which does — so re-parenting to <body> is the one fix that works
+  // regardless of which section the trigger lives in.
+  function placeConsultMenu(menu, btn) {
+    var r = btn.getBoundingClientRect();
+    var mw = menu.offsetWidth || 270;
+    var left = r.left + r.width / 2 - mw / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - mw - 8));
+    menu.style.left = left + 'px';
+    menu.style.top = (r.bottom + 10) + 'px';
+  }
+  function closeAllConsultMenus() {
+    $$('.consult-menu.open').forEach(function (m) { m.classList.remove('open'); });
+  }
+  $$('.consult-trigger').forEach(function (btn) {
+    var wrap = btn.closest('.consult-cta');
+    var menu = wrap && wrap.querySelector('.consult-menu');
+    if (!menu) return;
+    if (menu.parentNode !== document.body) document.body.appendChild(menu);
+    menu._trigger = btn;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = menu.classList.contains('open');
+      closeAllConsultMenus();
+      if (!isOpen) { placeConsultMenu(menu, btn); menu.classList.add('open'); }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.consult-menu') || e.target.closest('.consult-trigger')) return;
+    closeAllConsultMenus();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAllConsultMenus();
+  });
+  // Reposition on resize; close on scroll (simplest correct behavior —
+  // avoids the menu drifting away from its trigger as the page moves).
+  window.addEventListener('resize', function () {
+    $$('.consult-menu.open').forEach(function (m) { if (m._trigger) placeConsultMenu(m, m._trigger); });
+  });
+  window.addEventListener('scroll', function () {
+    closeAllConsultMenus();
+  }, { passive: true, capture: true });
 })();
